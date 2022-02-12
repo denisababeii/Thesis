@@ -1,0 +1,1616 @@
+ID,Name,Description,Type
+1,OOP,"To prepare an object-oriented design of small/medium scale
+problems and to learn the C++ programming language, as well as
+to create graphical user interfaces using Qt. To demonstrate the differences between traditional imperative
+design and object-oriented design.
+• To explain class structures as fundamental, modular building blocks.
+• To understand the role of inheritance, polymorphism, dynamic
+binding and generic structures in building reusable code.
+• To explain and to use defensive programming strategies, employing
+formal assertions and exception handling.
+• To write small/medium scale C++ programs using Qt.
+• To use classes written by other programmers when constructing their
+systems. Basic elements in C
+• Basic elements of C/C++ language
+• Lexical elements. Operators. Conversions
+• Data types. Variables. Constants
+• Visibility scope and lifetime of the variables
+• C++ Statements • Function declaration and definition. Function
+overloading. Inline functions
+2. Modular programming in C/C++
+• Functions. Parameters
+• Pointers and memory management
+• Function pointers
+• Header files. Libraries
+• Modular implementations of ADTs
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+3. Object oriented programming in C++
+• Classes and objects
+• Defining classes
+• Object creation and destruction
+• Operator overloading
+• Static and friend elements
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+4. Templates and the Standard Template Library
+• Function templates
+• Class templates
+• Containers, iterators in STL
+• STL algorithms
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+5. Inheritance
+• Simple inheritance and derived classes
+• Special functions in classes and inheritance
+• Substitution principle
+• Method overriding
+• Multiple inheritance
+• UML class diagrams and relations
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+6. Polymorphism
+• Inheritance, polymorphism
+• Static and dynamic binding
+• Virtual methods
+• Upcasting and downcasting
+• Abstract classes
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+7. Streams and exception handling
+• Input/Output streams
+• Insertion and extraction operators
+• Formatting. Manipulators. Flags
+• Text files
+• Exception handling. Exception-safe code
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+8. Resource management and RAII
+• Resource Acquisition Is Initialization (RAII)
+• Smart pointers
+• RAII in STL. Smart pointers in STL
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+9. Graphical User Interfaces (GUI)
+• Qt Toolkit: installation, Qt modules and instruments
+• Qt GUI components
+• Layout management
+• Qt Designer
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical Event driven programming elements
+• Callbacks
+• Events. Signals and slots in Qt
+• GUI design
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+11. Event driven programming elements
+• Model View Controller pattern
+• Models and Views in Qt
+• Using predefined models. Implementing custom models
+• Case study: Gene manager application
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+12. Design patterns
+• Creational, structural, behavioural patterns
+• Examples
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+13. Design patterns
+• Adapter pattern
+• Observer pattern
+• Iterator pattern
+• Composite pattern
+• Strategy pattern
+• Case study application and examples
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration
+14. Revision
+• Revision of the most important topics covered by the
+course
+• Examination guide
+• Interactive exposure
+• Explanation
+• Conversation
+• Examples
+• Didactical
+demonstration",Compulsory
+2,DSA,"Study of data structures (arrays, linked lists, heaps, hash tables, binary
+trees) that can be used to implement abstract data types.
+• Study of the concept of abstract data type and the most frequently used
+abstract data types in application development.
+• Study of the data structures that can be used to implement these
+abstract data types.
+• Develop the ability to work with data stored in different data structures
+and to compare the complexities of their operations.
+• Develop the ability to choose the appropriate data structure in order to
+model and solve real world problems.
+• Acquire knowledge necessary to work with existing data
+structure/abstract data type libraries. Introduction. Data structures. Abstract
+Data Types
+• Data abstractization and encapsulation
+• Pseudocode conventions
+• Complexities Arrays. Iterators
+• Dynamic array
+• Amortized analysis
+• Interface of an iterator
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+3. Abstract Data Types
+• ADT Set: description, domain,
+interface and possible representations
+• ADT Map: description, domain,
+interface and possible representations
+• ADT Matrix: description, domain,
+interface and possible representations
+• ADT MultiMap: description, domain,
+interface and possible representations
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+4. Abstract Data Types II
+• ADT Stack: description, domain,
+interface and possible representations
+• ADT Queue: description, domain,
+interface and possible representations
+• ADT PriorityQueue: description,
+domain, interface and possible
+representations
+• ADT Deque: description, domain,
+interface and possible representations
+• ADT List: description, domain,
+interface and possible representations
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+5. Linked Lists
+• Singly linked list: representation and
+operations
+• Doubly linked list: representation and
+operations
+• Iterator for linked lists
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+- Case study
+6. Linked Lists II
+• Sorted linked lists: representation and
+operations
+• Circular linked lists: representation
+and operations
+• Linked lists on arrays: representation
+and operations
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+7. Binary Heap
+• Representation, specific operations
+• HeapSort
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+8. Hash Table
+• Direct address tables
+• Hash tables: description, properties
+• Collision resolution through separate
+chaining
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration • Collision resolution through coalesced
+chaining
+• Collision resolution through open
+addressing
+- Description
+- Conversation
+- Didactical
+demonstration
+10. Hash tables
+• Perfect hashing
+• Linked hash tables
+• Containers represented over hash
+tables
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+11. Trees
+• Concepts related to trees
+• Applications of trees
+Binary Trees
+• Description, properties
+• Domain and interface of ADT Binary
+Tree
+• Tree traversals: recursive/non
+recursive algorithms.
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+12. Binary Search Trees
+• Description, properties
+• Representation
+• Operations: recursive and nonrecursive algorithms
+• Containers represented over binary
+search tables
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+13. Balanced Binary Search Trees
+• AVL Trees
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+14. Applications and data structure libraries
+in different programming languages
+(Python, C++, Java, C#)
+- Examples
+- Exposure
+- Description
+- Conversation
+- Didactical
+demonstration
+9. Hash Table - Exposure",Compulsory
+3,DBMS,"To get acquainted with the fundamental concepts concerning databases
+? To gain a thorough understanding of the relational data model
+? To manage (to create, to modify) relational databases in SQL Server
+? To analyze data using complex SQL queries
+? To optimize SQL queries . Introduction to Databases Interactive
+presentation
+Conversation
+Examples
+Explanation
+2. The Relational Data Model Interactive
+presentation
+Conversation
+Examples
+Explanation
+3. SQL Queries Interactive
+presentation
+Conversation
+Examples
+Explanation
+4-5. Functional Dependencies, Normal Forms Interactive
+presentation 6. The Relational Algebra Interactive
+presentation
+Conversation
+Examples
+Explanation
+7. The Physical Structure of Databases Interactive
+presentation
+Conversation
+Examples
+Explanation
+8-10. Indexes. Trees. Hash files Interactive
+presentation
+Conversation
+Examples
+Explanation
+11. Evaluating the Relational Algebra Operators Interactive
+presentation
+Conversation
+Examples
+Explanation
+12. Conceptual Modeling Interactive
+presentation
+Conversation
+Examples
+Explanation
+13. Data Streams Interactive
+presentation
+Conversation
+Examples
+Explanation
+14. Problems Interactive
+presentation
+Conversation
+Examples
+Explanation",Compulsory
+4,ASC,"Understanding by the students of the computer architecture models, processor
+functioning, computer information representation usage
+comprehension of the microprocessor architecture and functioning
+components
+and its native low-level workflow. Awareness of the architectural impact on
+designing and implementing high level programming languages.
+Understanding the impact of the 80x86 processor architecture on Windows
+functioning and limitations. Awareness of the triade computer architecture –
+operating systems – programming languages and their interactions as the basic
+core of Computer Science. Data representation: elementary data, binary representation and
+placement orders, data organizing and storing
+Exposure,
+description,
+explanation,
+examples,
+discussion
+of case
+studies
+2
+Character coding, signed and unsigned representation,
+complementary code, conversions, the concept of mathematical
+overflow.
+3
+Computing systems architecture: organization of a CS, the central
+processing unit, the system clock, computer on n bits, the storage,
+peripheral devices.
+4
+CS performances, the 80x86 microprocessor’s architecture – general
+view of its structure. The address computation mechanism,
+addressing modes, far addresses and near addresses.
+5 The Executive Unit (EU) of the 80x86 microprocessor: role and functions of the general EU registers and the flags. Classifications
+(Registers and Flags) and case studies.
+6
+The Bus Interface Unit (BIU) of the 80x86 microprocessor: the
+address registers, segment registers, machine instructions
+representation. The offset specification formula on 32 bits vs. on 16
+bits.
+7
+Assembly language elements: the source line format,
+expressions, accessing the operands, operators. Temporary nondistructive conversions (and specific operators).
+8
+Directives for defining segments, data definition directives, directives
+EQU and INCLUDE, macros.
+9
+Assembly language instructions: transfer instructions,
+signed and unsigned distructive conversions, signed and unsigned
+arithmetic operations, bitwise shifting and rotating, logical bitwise
+operations.
+10
+Conditional and unconditional jump instructions,
+looping instructions, string instructions. Overflow analysis: how the
+80x86 architecture reacts to it.
+11
+Subprograms call implementation and multimodule
+programming: CDECL and STDCALL calling conventions, call
+code, entry code, exit code, the import-export directives EXTRN and
+GLOBAL.
+12
+Linking NASM modules with modules written in high-level
+programming languages (case study – C programming language).
+Recursive call extensive example discussion.
+13
+Windows static and dynamic libraries: LIB vs. DLL. NASM output
+object file formats and their library support. Win32 system libraries:
+file management examples, process management, memory
+management. Implementing user libraries.
+14
+Real address mode vs.protected mode code execution environment.
+The interaction between user programs and the OS kernel. The
+virtual memory concept. Overview of the segmentation and paging
+process. Protection setup sample code: real-mode to protected-mode
+transition and 32-bit segments.",Compulsory
+5,FP,"To know the basic concepts of software engineering (design,
+implementation and maintenance
+7.2 Specific objectives of
+the discipline
+? To know the key concepts of programming
+? To know the basic concepts of software engineering (design,
+implementation and maintenance of software systems).
+? To gain understanding of basic software tools used in development and
+testing.
+? To learn Python programming language, and to get used to Python
+programming, running, testing, and debugging programs.
+? To acquire and improve their individual programming style. Introduction to software development processes
+? What is programming: algorithm, program, basic elements of the
+Python language, Python interpreter, basic roles in software
+engineering
+? How to write programs: problem statement, requirements, feature
+driven development process
+? Example: calculator, iteration modelling
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+2. Procedural programming
+? Compound types: list, tuple, dictionary
+? Functions: test cases, definition, variable scope, calling, parameter
+passing
+? Test-driven development (TDD) steps, refactoring
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+3. Modular programming
+? What is a module: Python module definition, variable scope in a
+module, packages, standard module libraries, deployment
+? Interactive
+exposure
+? Explanation How to organize source code: responsibilities, single responsibility
+principle, separation of concerns, dependency, coupling, cohesion
+? Common layers in an information system - logical architecture
+? Eclipse + PyDev
+? Conversation
+? Examples
+? Didactical
+demonstration
+4. User defined types
+? How to define new data types: encapsulation, information hiding
+(data hiding in Python), guidelines, abstract data types
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+5. Design guidelines
+? Problem statement: a program for managing information (CRUD
+operations)
+? Layered architecture: UI layer, application layer, domain layer,
+infrastructure layer
+? GRASP patterns
+? Example of application development: entity, validator, repository,
+controller
+? Principles: information expert, low coupling, high cohesion,
+protected variation, single responsibility, dependency injection
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+6. Object based programming
+? Objects and classes: classes, objects, fields, methods, special class
+methods (operator overloading), Python scope and namespace
+? UML Diagrams: class diagrams, relationships, associations,
+invariants
+? Inheritance: UML generalization, code reuse, overriding, inheritance
+in Python
+? Exceptions
+? Example: working with files in Python, repository implementations
+using files
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+7. Program design
+? Top down and bottom up strategies: top down design, bottom up
+design, bottom up programming style, mixed approach
+? Organizing the UI
+? Class invariants
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+8. Program testing and inspection
+? Testing methods: exhaustive testing, black box testing, white box
+testing
+? Testing levels: unit testing, integration testing
+? Automated testing, TDD
+? Program inspection: coding style, refactoring
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+9. Recursion
+? Notion of recursion
+? Direct and indirect recursion
+? Examples
+? Interactive
+exposure
+? Explanation
+? Conversation0. Algorithm complexity
+? Empiric analysis and asymptotic analysis
+? Asymptotic notation: big-o, little-o, big-omega, little-omega, theta;
+properties
+? Examples of magnitude orders
+? Comparison of algorithms from an efficiency point of view
+? Structural complexity
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+11. Searching. Sorting.
+? Specification of the searching/sorting problem
+? Search methods: sequential, binary.
+? Sort methods: BubbleSort, SelectionSort, InsertionSort, QuickSort,
+MergeSort
+? Complexity of searching/sorting algorithms
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+12. Problem solving methods (I)
+? General presentation of the Greedy and Backtracking methods
+? Algorithms and complexity
+Examples
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+13. Problem solving methods (II)
+? General presentation of the Divide & Conquer and Dynamic
+Programming methods
+? Algorithms and complexity
+? Examples
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration
+14. Revision
+? Revision of most important topics covered by the course
+? Exam guide
+? Interactive
+exposure
+? Explanation
+? Conversation
+? Examples
+? Didactical
+demonstration",Compulsory
+6,SE,"Be able to understand software production life cycle
+? Improved skills on developing software
+7.2 Specific objective of the
+discipline
+? Understand and work with the concepts of: model, model properties.
+Understanding the role of abstraction in producing models.
+? Understand the differences between modeling languages and modeling
+methodologies.
+? Understand and work with the most important UML concepts used in
+constructing software models Introduction to Software Engineering Exposure: description,
+explanation, examples,
+discussion of case
+studies
+2. Using UML to specify models Exposure: description,
+explanation, examples,
+discussion of case
+studies
+3. Requirements Elicitation Exposure: description,
+explanation, examples,
+discussion of case
+studies
+4. Analysis Exposure: description,
+explanation, examples,
+discussion of case
+studies
+5. System Design - Decomposing the System Exposure: description,
+explanation, examples,
+discussion of case
+studies
+6. System Design - Addressing Design Goals Exposure: description,
+explanation, examples,
+discussion of case . Object Design - Reusing Pattern Solutions Exposure: description,
+explanation, examples,
+discussion of case
+studies
+8. Object Design - Specifying Interfaces Exposure: description,
+explanation, examples,
+discussion of case
+studies
+9. Mapping Models to Code Exposure: description,
+explanation, examples,
+discussion of case
+studies
+10. Testing Exposure: description,
+explanation, examples,
+discussion of case
+studies
+11. Rationale & Configuration Management Exposure: description,
+explanation, examples,
+discussion of case
+studies
+12. Project Management Exposure: description,
+explanation, examples,
+discussion of case
+studies
+13. Software Life Cycle Exposure: description,
+explanation, examples,
+discussion of case
+studies
+14. Methodologies Exposure: description,
+explanation, examples,
+discussion of case
+studies
+",Compulsory
+7,FLCD,"Be able to understand compiler design and to implement compiler
+techniques
+• Improved programming skills
+7.2 Specific objective of the
+discipline
+• Acquire knowledge about back-end of a compiler
+• Understand and work with formal languages concepts: Chomsky hierarchy;
+regular grammars, finite automata and the equivalence between them;
+context-free grammars, push-down automata and their equivalence
+• Understand and work with compilers concepts: scanning, parsing General Structure of a compiler. Compiler phases Exposure: description,
+explanation, examples,
+discussion of case
+studies
+2. Scanning (Lexical Analysis) Exposure: description,
+explanation, examples,
+discussion of case
+studies
+3. Introductory notions of formal languages.
+Grammars and Finite Automata
+Exposure: description,
+explanation, examples,
+debate, dialogue
+4. Regular languages, regular expressions, Exposure: description, equivalence between finite automata, regular
+grammars and regular expressions. Pumping
+lemma
+explanation, examples,
+proofs
+5. Context-free grammars, syntax tree Exposure: description,
+explanation, examples,
+discussion of case
+studies
+6. Parsing: general notions, classification. Exposure: description,
+explanation, examples,
+discussion of case
+studies
+7. Recursive-descendant parser Exposure: description,
+explanation, examples,
+discussion of case
+studies
+8. LL(1) parser Exposure: description,
+explanation, examples,
+discussion of case
+studies
+9. LR(k) Parsing method. LR(0) parser Exposure: description,
+explanation, examples,
+discussion of case
+studies
+10. SLR, LR(1), LALR parser Exposure: description,
+explanation, examples,
+discussion of case
+studies
+11. Scanner generator (lex); Parser generators (yacc) Exposure: description,
+examples, discussion of
+case studies, live demo
+12. Attribute grammars; generation of
+intermediary code
+Exposure: description,
+explanation, examples,
+discussion of case
+studies
+13. Code optimization and object code generation Exposure: description,
+explanation, examples,
+discussion of case
+studies
+14. Push-down automata and Turing machines Exposure: description,
+explanation, examples,
+discussion of case
+studies
+",Compulsory
+8,OS,"Learning the main entities and concepts that operates in operating
+systems: processes and files.
+· The base station processes the binding of files and communication
+between processes.
+· Learning programming bases specific operating systems: type scripting
+language programming (sh, bash, PowerShell) and use system functions
+in standard C language.
+· Presentation of the case studies, the enitatilor, concepts and APIs
+operating processes provided by the Unix family of operating systems
+(Solaris, Linux, BSD, etc)
+7.2 Specific objective of the
+discipline
+· Unix operating system: introduction.
+· Programming Shell.
+· Windows Introduction: bat file commands
+· Unix file system: tree structure and connections.
+· Unix Operating System I / O, processes signals.
+· Communication between Unix processes.
+· Installation and configuration of operating systems Week. 1 Unix: Introduction.
+ Unix commands and arguments.
+ Regular Expression, generic specification of
+files.
+ Filters and text editors.
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 2 Shell Programming.
+ Sh Processors.
+ Variables, control structures (if, for, while, do,
+case).
+ Embedded commands.
+· Interactive
+exposure
+· Explanation
+· Conversation
+ Remarcable shell variables. · Didactical
+demonstration
+Week. 3. Windows: introduction.
+ Commands and arguments.
+ Files and paths; Access rights
+ Command bat files
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 4 OS Unix: processes.
+ Unix processes; structure, API (fork, wait,
+exec, exit, system, popen).
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 5 POSIX Threads
+ Concepts.
+ API: create, exit, join.
+ Mutex variables.
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 6 Unix File System; I/O operations.
+ Hard and symbolic links.
+ Mounting.
+ File access rights
+ open, close, read, write, lseek, file lock.
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 7 General Theory of Operating Systems
+ Classifications.
+ Functions
+ Architectures.
+· Interactive
+exposure
+· Explanation
+· Conversation Didactical
+demonstration
+Week. 8 Processes.
+ Concepts
+ Concurrence.
+ Semaphores.
+ Critical sectioons and race conditions
+ Deadlock.
+ Processes scheduling
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 9 Memory management
+ Architecture
+ Alocatiopns: partitioned, paging, segmentation.
+ Swapping
+ Memory scheduling
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 10 Phisical I/O
+ I/O chanels
+ Zone tampon.
+ Disk access scheduling
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration Week. 11 File Systems
+ Concepts
+ Low-level implementations.
+ Directories
+ Jurnalization; copy-on-write
+ Example: FAT, EXT3, NTFS
+· Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 12 Operating systems booting · Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 13 Linux kernel · Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration
+Week. 14 Windows kernel · Interactive
+exposure
+· Explanation
+· Conversation
+· Didactical
+demonstration",Compulsory
+9,WEBDEV,"? To introduce students to modern techniques for web programming
+using both server-side and client-side technologies. The course is
+meant as an introductory course in web technologies.
+7.2 Specific objective of the
+discipline
+? Understanding how the World Wide Web is built and functions
+? Knowing the main technologies/languages used in web development:
+HTML/XML, CSS, Javascript/DOM, PHP, JSP/Servlet, ASP.NET WWW history and concepts: The Internet
+addressing mechanism, name servers, URLs
+and URIs
+Exposure:description,
+explanation,examples,
+discussion of case
+studies
+2. HTML – HyperText Markup Language.
+HTML 5
+Exposure:description,
+explanation,examples,
+discussion of case
+studies HTTP – HyperText Transfer Protocol Exposure:description,
+explanation,examples,
+discussion of case
+studies
+4. CSS – Cascading Style Sheets. CSS3.
+Responsive design. Web fonts and icons. CSS
+preprocessors.
+Exposure:description,
+explanation,examples,
+discussion of case
+studies
+5. XML languages. XHTML, XML, XSLT Exposure:description,
+explanation,examples,
+discussion of case
+studies
+6. DOM – Document Object Model. The
+Javascript language: fundamental concepts,
+functions, objects, collections, async
+programming (setTimeout, promises).
+Javascript browser API.
+Exposure:description,
+explanation,examples,
+discussion of case
+studies
+7. Javascript libraries: jQuery Exposure:description,
+explanation,examples,
+discussion of case
+studies
+8. Javascript frameworks: angular js Exposure:description,
+explanation,examples,
+discussion of case
+studies
+9. JSON – Javascript Object Notation Exposure:description,
+explanation,examples,
+discussion of case
+studies
+10. Server-side technologies: CGI (Common
+Gateway Interface. AJAX
+Exposure:description,
+explanation,examples,
+discussion of case
+studies
+11. Server-side technologies: PHP Exposure:description,
+explanation,examples,
+discussion of case
+studies
+12. Server-side technologies: JSP and Java servlets Exposure:description,
+explanation,examples,
+discussion of case
+studies
+13. Server-side technologies: ASP .NET Exposure:description,
+explanation,examples,
+discussion of case
+studies
+14. Other web technologies: graphics (WebGL),
+real-time communication (WebRTC).
+Web security: same-origin principle, cross-site
+scripting, sql injection.
+Exposure:description,
+explanation,examples,
+discussion of case
+studies",Compulsory
+10,PDP,"Aquire the main concepts of concurrent, parallel and distributed
+programming;
+? Basics of communication between processes and threads, on the same
+machine or on distinct machines;
+? Knowing basic techniques of parallel programming;
+? Knowing and using parallel application design patterns
+? Knowing and using the existing frameworks for developing parallel
+and distributed applications
+7.2 Specific objective of the
+discipline
+? Parallel architectures and parallel programming systems
+? Know how to use parallel programming techniques in problem solving
+? Know how to evaluate the performance increase obtained by
+parallelization
+? Ability to work independent or in a team in order to solve problems in
+a parallel and/or distributed context General introduction:
+? necessity to use parallelism
+? concurrent vs. parallel vs.
+distributed computing
+? levels of parallelism
+Exposition, concepts,
+examples, case study.
+2. Parallel architectures:
+? Pipeline
+Exposition, concepts,
+examples, case study. Vectorial machines
+? Grid and cluster computers
+? Supercomputers
+3. :
+? Processes vs threads
+? Managing the processes/threads
+Exposition, concepts,
+examples, case study.
+4. Concurrency concepts:
+? race conditions, critical sections,
+mutual exclusion, deadlock
+? synchronizations: monitors,
+semaphores
+Exposition, concepts,
+examples, case study.
+5. Models of parallelism:
+? Implicit vs. explicit parallelism
+? data parallelism
+? message-passing
+? shared memory
+Exposition, concepts,
+examples, case study.
+6. Parallel programming in shared memory: C
+pthreads, C++ threads, Java threads, OpenMP
+Exposition, concepts,
+examples, case study.
+7. Performance evaluation for parallel programs:
+PRAM (Parallel Random Access Machine).
+Efficiency, cost, scalability.
+Exposition, concepts,
+examples, case study.
+8. Parallel programming patterns:
+? master-slaves
+? task farm / work pool
+? divide et impera
+? pipeline
+Exposition, concepts,
+examples, case study.
+9. Message passing parallel programs. MPI Exposition, concepts,
+examples, case study.
+10. Phases in a parallel program: PCAM (Partition,
+Communication, Aggregation, Mapping):
+? task decomposition
+? domain (geometrical) decomposition
+? granularity
+? degree of parallelism
+? task dependency
+Exposition, concepts,
+examples, case study.
+11. Parallel programs construction techniques:
+? divide et impera
+? binary tree
+? recursive double-back
+Exposition, concepts,
+examples, case study.
+12. Data parallel programming Exposition, concepts,
+examples, case study.
+13. GPGPU (General Processing on the Graphical
+Processing Unit): OpenCL, CUDA
+Exposition, concepts,
+examples, case study.
+14. Distributed file systems Exposition, concepts,
+examples, case study.",Compulsory
+11,NLP,"To introduce the basic principles, domains and tasks in Natural
+Language Processing (NLP)
+? To understand the current state of the art in order to realize an
+overview of a specific domain in NLP and to implement a NLP tool.
+7.2 Specific objective of the
+discipline
+? Apply and use formal models (logics, grammars, parsing), statistic
+models (HMM), artificial intelligence algorithms and techniques to
+solve different tasks at the syntactic level (POS-tagging, parsing,
+chunking), and semantic level (word sense disambiguation,
+document summarization, anaphora resolution) in Natural Language
+Processing domain Course 1.
+Natural Language Processing (NLP): stages, domains,
+applications.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 2.
+-WordNet and RoWordNet - knowledge structure,
+semantic relations, lexical relations.
+- WordNetSimilarity tool and similarity measures for
+words.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 3. Part of speech tagging.
+- part-of-speech tagging in English.
+- part-of-speech tagging in Romanian
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 4. Syntactic parsing Exposure: description,
+explanation, - grammar rules for English - sentence level construction;
+- Cocke-Kasami-Yonger (CKY) algorithm;
+examples, debate,
+dialogue
+Course 5. Statistical parsing
+- Probabilistic Context-Free Grammars (PCFG);
+- Probabilistic CKY (Cocke-Kasami-Yonger) parsing of
+ PCFGs.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 6. Hidden Markov Model
+- Markov chains, Hidden Markov Model(HMM);
+- three canonical problems associated with HMM
+- the forward algorithm; Viterbi algorithm.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 7. Word Sense Disambiguation
+- dictionary and graph-based approaches.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 8. Document summarization
+- approaches based on clustering, graphs.
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 9. Anaphora resolution
+- Lapin and Lease algorithm
+- Mitkov’s algorithm
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 10. Sentiment analysis
+- opinion mining in social media
+- emotion analysis in literature
+Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 11. Textual entailment Exposure: description,
+explanation,
+examples, debate,
+dialogue
+Course 12. Written exam Exposure: description,
+explanation,
+examples, debate,",Optional
+12,AR_VR,"Introducing the students to virtual reality environment programming.
+The students should learn the following concepts: general structure of
+a virtual reality application, human interaction with the virtual
+environment through the use of input devices, modeling (visual,
+physical, tactile, and force), and character animation. In the end the
+students should be able to create a multi-sensory, interactive virtual
+reality application Weeks 1 - 3
+1. Introduction to virtual environments,
+input/output
+devices, state of the art
+2. Scene definition
+3. Ray tracing
+Exposition:
+presentation,
+explanations,
+practical examples,
+demonstrations,
+case-study
+discussions
+Weeks 4 - 6
+4. Virtual object modeling (geometric primitives,
+custom build geometries)
+5. Virtual reality application architecture
+6. Position and orientation representation
+(position
+vector, Euler angles, orientation matrix,
+7. JMonkey3D introduction
+8. Scene graph (reference frames, node hierarchy,
+node types, light nodes, fog)
+Exposition:
+presentation,
+explanations,
+practical examples,
+demonstrations,
+case-study
+discussions
+Weeks 7 - 9
+9. JMonkey3D examples
+10. JMonkey3D examples
+11. Scene optimizations (level of details, textures,
+cell-segmentation)
+Exposition:
+presentation,
+explanations,
+practical examples,
+demonstrations,
+case-study
+discussions
+Weeks 9 - 12
+12. Collision detection
+13. Simulating spatial phenomena (fog, smoke,
+fire,
+fluids)
+14. Physics engines
+15. Character animation
+Exposition:
+presentation,
+explanations,
+practical examples,
+demonstrations,
+case-study
+discussions",Optional
+13,SVV,"Enhance the students understanding of testing and test design techniques.
+? Provide the students with an environment in which they can explore the
+usage and usefulness of software testing and test design concepts in
+various business scenarios.
+? Induce a realistic and industry driven view of software testing concepts
+and their inherent benefits.
+7.2 Specific objective of the
+discipline
+? Give students the ability to explore various test design techniques
+applied to different levels of testing.
+? Improve the students’ abilities to tackle on goal driven testing.
+? Enhance the students understanding of test design techniques value in
+business.
+? Students will be able to use various tools for the testing process (i.e., test
+management, test running, test reporting and bug reporting).
+? Students will be able to design test cases according to an established
+testing goal and using specific test design technique in order to
+investigate the software. . Software Testing. Test Design Techniques
+1.1. Software Testing. Goals. Scope
+1.2. Test Design Technique. Attributes
+1.3. Taxonomy of Test Design Techniques
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+2. Coverage-based Techniques I
+2.1. Focus. Objectives
+2.2. Tours. Logical Expressions
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+3. Coverage-based Techniques II
+3.1. Specification-based Testing;
+3.2. Requirements-based Testing;
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+4. Tester-based Techniques I ? Interactive exposure Focus. Objectives
+4.2. User Testing. Alpha Testing. Beta Testing
+? Explanation.
+Conversation
+? Didactical
+demonstration
+5. Tester-based Techniques II
+5.1. Bug Bashes. Paired Testing.
+5.2. Coverage-based Techniques vs Tester-based
+Techniques
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+6. Activity-based Techniques
+6.1. Focus. Objectives
+6.2. Guerilla Testing. All-pairs Testing
+6.3. Use Cases Testing. Scenario Testing
+6.4. Coverage-based Techniques vs Activity-based
+Techniques
+? Interactive exposure
+? Explanation
+? Conversation
+? Didactical
+demonstration
+7. Evaluation-based Techniques
+7.1. Focus. Objectives
+7.2. Function Equivalence Testing. Self-verifying data
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+8. Desired result-based Techniques
+8.1. Focus. Objectives
+8.2. Confirmation Testing. User Acceptance Testing
+8.3. Desired-based Techniques vs Evaluation-based
+Techniques
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+9. Risk-based Techniques
+9.1. Focus. Objectives
+9.2. Quick-tests. History-based Testing. Usability Testing
+9.3. HTSM. Failure modes
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+10. Test Design Techniques Analysis
+10.1.Tester-based Techniques vs Activity-based Techniques
+10.2.Risk-based Techniques vs Coverage-based Techniques
+10.3.Desired result-based Techniques vs Risk-based
+Techniques
+? Interactive exposure
+? Explanation.
+Conversation
+? Didactical
+demonstration
+11. Essay Presentations ? Interactive exposure
+? Conversation
+12. Essay Presentations ? Interactive expos",Optional
+14,CC,"To introduce the students to cloud computing concepts, the motivation
+behind migrating to the cloud and the challenges such a migration entails.
+? Walk through a relatable, real life use case and point out the benefits of
+using a public cloud provider in most commercial software endeavours.
+7.2 Specific objective of the
+discipline
+? Become familiar with Amazon Web Services core offerings.
+? Get hands on experience in developing cloud native applications To introduce the students to cloud computing concepts, the motivation
+behind migrating to the cloud and the challenges such a migration entails.
+? Walk through a relatable, real life use case and point out the benefits of
+using a public cloud provider in most commercial software endeavours.
+7.2 Specific objective of the
+discipline
+? Become familiar with Amazon Web Services core offerings.
+? Get hands on experience in developing cloud native applications Scalability
+? Vertical vs Horizontal
+? Load balancing
+? Auto-scaling
+Exposure: description,
+explanation, examples, debate
+5. Web capabilities
+? Static website hosting
+? Content distribution
+? (Dynamic) Domain name servers
+Exposure: description,
+explanation, examples, debate
+6. Availability, disaster recovery
+? Resilience
+? Multi-AZ deployments
+? Disaster recovery strategies
+Exposure: description,
+explanation, examples, debate
+7. Infrastructure security
+? Users, roles, permissions
+Exposure: description,
+explanation, examples, debate
+8. The PaaS model
+? Managed runtimes
+? Container basics
+? Docker
+Exposure: description,
+explanation, examples, debate
+9. Managed databases
+? Relational
+? Key-value (Redis, S3)
+? Document (Mongo)
+Exposure: description,
+explanation, examples, debate
+10. Application security
+? OAuth
+? Identity providers
+Exposure: description,
+explanation, examples, debate
+11. Integration services
+? Queues
+? Pub-sub topics
+? Email services
+Exposure: description,
+explanation, examples, debate
+12. Serverless
+? FaaS
+? Specific databases (Dynamo, Aurora)
+Exposure: description,
+explanation, examples, debate
+13. API Design
+? REST
+? API Gateways
+Exposure: description,
+explanation, examples, debate
+14. Recap and closing Examples, debate",Optional
+15,CS,"Be able to understand compiler design and to implement compiler
+techniques
+• Be able to understand compiler optimizations
+• Improved programming skills
+7.2 Specific objective of the
+discipline
+• Acquire knowledge about back-end of a compiler
+• Understand concepts: virtual machine, JIT compilation, compiler
+optimizations, machine code generation Review compiler phases. Semantic analysis.
+Define attribute grammar. [1,4]
+Conversation: debate,
+dialogue; exposuse:
+description, explanation,
+examples
+2. Manual methods [2,4]: Control flow graph,
+Data flow equations
+exposure: description,
+explanation, examples,
+discussion of case studies
+3. Symbolic interpretation [2,4] exposure: description,
+explanation, example
+4. Functions: activation record [2,3] exposure: description,
+explanation, example;
+dialogue, case studies
+5. Static analysis – part 1 [2,3,4] exposure: description,
+explanation, example,
+dialogue, debate
+6. Static analysis – part II [2,3,4] exposure: description,
+explanation, example,
+discussion of case studies
+7. Compiler design for imperative and objectoriented languages (I): Identification, Type
+checking, Type table, Source Language Data
+Representation & Handling [2]
+exposure: description,
+explanation, example,
+dialogue, debate, case
+studies
+8. Compiler design for imperative and objectoriented languages (II):, Functions- activation
+records, Object Type, Inheritance,
+Polymorphism [2,3]
+exposure: description,
+explanation, example,
+case studies, dialogue,
+debate
+9. Compiler design for functional languages [2,3] exposure: description,
+explanation, example,
+case studies, dialogue,
+debate
+10. Compiler design for logical languages [2,3] exposure: description,
+explanation, example,
+case studies, dialogue,
+debate
+Memory management: Garbage Collection
+mechanism [2,3,5]
+exposure: description,
+explanation, example,
+case studies, dialogue,
+debate
+12. Java Language Design [3,5] exposure: description,
+explanation, example,
+case studies, dialogue,
+debate
+13. .NET Language Design [4,5,6] exposure: description,
+explanation, example,
+case studies,",Optional
+16,IOT,"Embedded IoT development competencies
+Scientific method of research
+Analysis and formalization of problems requiring computer science
+methods and models
+Use of computer science methods in problems solving
+Analysis, design, and implementation of software systems for real
+world applications
+Proficient use of methodologies and tools specific to programming
+languages and software systems
+1. Investigating real-life problems. The social
+purpose of Computer Science. Ethics and morality
+Interactive exposure
+Explanation in Software Development and Science Conversation
+Didactical demonstration
+2. Evaluating the quality of scientific papers and
+publications. Establishing a proper bibliographic
+basis
+Interactive exposure
+Explanation
+Conversation
+Didactical demonstration
+3. Qualitatively sorting and filtering bibliographic
+resources and assessing the state-of-the-art of the
+problem domain. Clustering the bibliography
+based on the main research directions
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+4. The danger of plagiarism and ways of
+combating it. Identifying unexplored or improvable
+research niches
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+5. Harvesting datasets from the state-of-the-art
+of the research niche as benchmarks for
+performance evaluation
+Interactive exposure
+Explanation Conversation
+Didactical
+demonstration
+6. Artificial Intelligence vs. Classical
+Algorithmics: choosing the right original approach
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+7. Designing and Developing an API for the
+proposed approach. Programming principles and
+good practices. Choosing the architecture, design
+patterns, language and technology. API testing
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+8. Data analysis, preprocessing and visualisation
+for algorithm training and performance evaluation.
+Training, Validation, Testing. Performance
+assessment
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+9. Optimisation via hyper-parametrization Interactive exposure
+Explanation Conversation
+Didactical demonstration . Software design aspects: design patterns and
+principles
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+11.Software development aspects: cybersecurity,
+UX, testing
+Interactive exposure
+Explanation Conversation
+Didactical demonstration
+12. IoT: Background and Challenges Interactive exposure
+Explanation Conversation
+Didactical demonstration
+13. IoT design and development aspects Interactive exposure
+Explanation Conversation
+Didactical demonstration
+14. Building and deploying an IoT-enhanced
+software product
+Interactive exposure
+Explanation Conversation
+Didactical demonstration",Optional
+17,ML,"Interpretation of mathematical and programming models.
+• Enhance the students understanding of programming paradigms
+• To emphasize the relation between theory of programing paradigms
+with their concrete applications in languages
+7.2 Specific objective of the
+discipline
+• Deepen the knowledge of programming in Java, C#, C++.
+• Learn new programming languages.
+• Introduction in Scala programming and other multiparadigm
+languages (Kotlin, Go, Ruby, Julia…). Programing paradigm overview
+Exposure: description, explanation,
+examples, discussion of case
+studies
+2.
+Basics of Scala Programming
+Exposure: description, explanation,
+examples, discussion of case
+studies
+3.
+Object oriented programing in Scala
+Exposure: description, explanation,
+examples, discussion of case
+studies
+4.
+Functional programming in Scala
+Exposure: description, explanation,
+examples, discussion of case
+studies
+5.
+Concurrency in Scala
+Exposure: description, explanation,
+examples, discussion of case
+studies Parallel programming paradigms in Scala Exposure: description, explanation,
+examples, discussion of case
+studies
+7. Introduction in Scala coroutines
+Exposure: description, explanation,
+examples, discussion of case
+studies
+8. Actor programming with Scala (Akka) Exposure: description, explanation,
+examples, discussion of case
+studies
+9. Metaprogramming Exposure: description, explanation,
+examples, discussion of case
+studies
+10. Dataflow programming Exposure: description, explanation,
+examples, discussion of case
+studies
+11. Essay and project presentation Exposure: description, explanation,
+examples, discussion of case
+studies
+12. Essay and project presentation Exposure: description, explanation,
+examples, discussion of case
+studies",Optional
