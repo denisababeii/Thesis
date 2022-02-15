@@ -1,4 +1,4 @@
-ID,Name,Description,Type
+ID,Name,Description,Type,Semester,Package
 1,OOP,"To prepare an object-oriented design of small/medium scale
 problems and to learn the C++ programming language, as well as
 to create graphical user interfaces using Qt. To demonstrate the differences between traditional imperative
@@ -160,7 +160,7 @@ course
 • Conversation
 • Examples
 • Didactical
-demonstration",Compulsory
+demonstration",Compulsory,2,0
 2,DSA,"Study of data structures (arrays, linked lists, heaps, hash tables, binary
 trees) that can be used to implement abstract data types.
 • Study of the concept of abstract data type and the most frequently used
@@ -316,7 +316,7 @@ in different programming languages
 - Conversation
 - Didactical
 demonstration
-9. Hash Table - Exposure",Compulsory
+9. Hash Table - Exposure",Compulsory,2,0
 3,DBMS,"To get acquainted with the fundamental concepts concerning databases
 ? To gain a thorough understanding of the relational data model
 ? To manage (to create, to modify) relational databases in SQL Server
@@ -371,7 +371,7 @@ Explanation
 presentation
 Conversation
 Examples
-Explanation",Compulsory
+Explanation",Compulsory,3,0
 4,ASC,"Understanding by the students of the computer architecture models, processor
 functioning, computer information representation usage
 comprehension of the microprocessor architecture and functioning
@@ -443,7 +443,7 @@ Real address mode vs.protected mode code execution environment.
 The interaction between user programs and the OS kernel. The
 virtual memory concept. Overview of the segmentation and paging
 process. Protection setup sample code: real-mode to protected-mode
-transition and 32-bit segments.",Compulsory
+transition and 32-bit segments.",Compulsory,1,0
 5,FP,"To know the basic concepts of software engineering (design,
 implementation and maintenance
 7.2 Specific objectives of
@@ -629,7 +629,7 @@ exposure
 ? Conversation
 ? Examples
 ? Didactical
-demonstration",Compulsory
+demonstration",Compulsory,1,0
 6,SE,"Be able to understand software production life cycle
 ? Improved skills on developing software
 7.2 Specific objective of the
@@ -693,7 +693,7 @@ studies
 explanation, examples,
 discussion of case
 studies
-",Compulsory
+",Compulsory,4,0
 7,FLCD,"Be able to understand compiler design and to implement compiler
 techniques
 • Improved programming skills
@@ -762,7 +762,7 @@ studies
 explanation, examples,
 discussion of case
 studies
-",Compulsory
+",Compulsory,5,0
 8,OS,"Learning the main entities and concepts that operates in operating
 systems: processes and files.
 · The base station processes the binding of files and communication
@@ -914,7 +914,7 @@ exposure
 · Explanation
 · Conversation
 · Didactical
-demonstration",Compulsory
+demonstration",Compulsory,2,0
 9,WEBDEV,"? To introduce students to modern techniques for web programming
 using both server-side and client-side technologies. The course is
 meant as an introductory course in web technologies.
@@ -995,7 +995,7 @@ scripting, sql injection.
 Exposure:description,
 explanation,examples,
 discussion of case
-studies",Compulsory
+studies",Compulsory,4,0
 10,PDP,"Aquire the main concepts of concurrent, parallel and distributed
 programming;
 ? Basics of communication between processes and threads, on the same
@@ -1083,7 +1083,7 @@ Processing Unit): OpenCL, CUDA
 Exposition, concepts,
 examples, case study.
 14. Distributed file systems Exposition, concepts,
-examples, case study.",Compulsory
+examples, case study.",Compulsory,5,0
 11,NLP,"To introduce the basic principles, domains and tasks in Natural
 Language Processing (NLP)
 ? To understand the current state of the art in order to realize an
@@ -1171,7 +1171,7 @@ examples, debate,
 dialogue
 Course 12. Written exam Exposure: description,
 explanation,
-examples, debate,",Optional
+examples, debate,",Optional,5,1
 12,AR_VR,"Introducing the students to virtual reality environment programming.
 The students should learn the following concepts: general structure of
 a virtual reality application, human interaction with the virtual
@@ -1233,7 +1233,7 @@ explanations,
 practical examples,
 demonstrations,
 case-study
-discussions",Optional
+discussions",Optional,5,1
 13,SVV,"Enhance the students understanding of testing and test design techniques.
 ? Provide the students with an environment in which they can explore the
 usage and usefulness of software testing and test design concepts in
@@ -1341,7 +1341,7 @@ Conversation
 demonstration
 11. Essay Presentations ? Interactive exposure
 ? Conversation
-12. Essay Presentations ? Interactive expos",Optional
+12. Essay Presentations ? Interactive expos",Optional,5,1
 14,CC,"To introduce the students to cloud computing concepts, the motivation
 behind migrating to the cloud and the challenges such a migration entails.
 ? Walk through a relatable, real life use case and point out the benefits of
@@ -1411,7 +1411,7 @@ explanation, examples, debate
 ? API Gateways
 Exposure: description,
 explanation, examples, debate
-14. Recap and closing Examples, debate",Optional
+14. Recap and closing Examples, debate",Optional,5,2
 15,CS,"Be able to understand compiler design and to implement compiler
 techniques
 • Be able to understand compiler optimizations
@@ -1476,7 +1476,7 @@ case studies, dialogue,
 debate
 13. .NET Language Design [4,5,6] exposure: description,
 explanation, example,
-case studies,",Optional
+case studies,",Optional,5,2
 16,IOT,"Embedded IoT development competencies
 Scientific method of research
 Analysis and formalization of problems requiring computer science
@@ -1559,7 +1559,7 @@ Didactical demonstration
 software product
 Interactive exposure
 Explanation Conversation
-Didactical demonstration",Optional
+Didactical demonstration",Optional,6,3
 17,ML,"Interpretation of mathematical and programming models.
 • Enhance the students understanding of programming paradigms
 • To emphasize the relation between theory of programing paradigms
@@ -1613,4 +1613,4 @@ examples, discussion of case
 studies
 12. Essay and project presentation Exposure: description, explanation,
 examples, discussion of case
-studies",Optional
+studies",Optional,6,3
