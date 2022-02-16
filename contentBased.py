@@ -4,15 +4,12 @@ from typing import List, Dict
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-NO_PACKAGES = 3
-
 class ContentBasedRecommender:
     def __init__(self, courses):
         self.courses = courses
         self.matrix_similar = self.build_matrix()
 
     def build_matrix(self):
-        # COMPUTE SIMILARITY
         tfidf = TfidfVectorizer(analyzer='word')
         matrix = tfidf.fit_transform(self.courses['CleanDescription'])
         cosine_similarities = cosine_similarity(matrix)
@@ -23,7 +20,8 @@ class ContentBasedRecommender:
 
     def filter(self, recom_course):
         optionals = list(filter(lambda course: course[2] != 0, recom_course))
-        recommendation = dict([(i+1, [-1, ""]) for i in range(NO_PACKAGES)])
+        packages = len(set([x[2] for x in optionals]))
+        recommendation = dict([(i+1, [-1, ""]) for i in range(packages)])
         for i in range(len(optionals)):
             if(recommendation[optionals[i][2]][0] < optionals[i][0]):
                 recommendation[optionals[i][2]] = [optionals[i][0], optionals[i][1]]
