@@ -5,7 +5,7 @@ nltk.download('omw-1.4')
 import string
 import pandas as pd
 
-class Cleaner:
+class CoursesCleaner:
     def __init__(self, file='COURSES.csv'):
         self.courses = pd.read_csv(file)
         self.ps = nltk.PorterStemmer()
