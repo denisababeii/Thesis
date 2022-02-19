@@ -1,3 +1,4 @@
+from tokenize import group
 import pandas as pd
 from scipy import spatial
 
@@ -26,5 +27,19 @@ similar_data = similar_data.sort_values(by=['Cosine Similarity'], ascending=Fals
 percentage = 15
 similar_data = similar_data.head(int(len(similar_data)*(percentage/100)))
 
-# grouped = similar_data.groupby(['Elective 1', 'Elective 2', 'Elective 3']).mean()
+elective_list = []
+for i in range (NO_PACKAGES):
+  elective_list.append(f"Elective {i+1}")
+grouped = similar_data.groupby(elective_list).mean()
 
+mark_list = []
+for i in range (NO_PACKAGES):
+  mark_list.append(f"Elective {i+1} Mark")
+marks = grouped[mark_list]
+
+marks.drop(marks[(marks['Elective 1 Mark'] < 50) | (marks['Elective 2 Mark'] < 50) | (marks['Elective 3 Mark'] < 50)].index, inplace=True)
+
+marks["Average"] = marks[mark_list].mean(axis=1)
+marks = marks.sort_values(by=['Average'], ascending=False)
+
+print(marks)

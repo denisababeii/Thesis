@@ -18,7 +18,7 @@ class CoursesCleaner:
         return self.courses
 
     def define_stopwords(self):
-        stopwords = ["student", "case", "week", "explanation", "course", "exposition", "concept", "study", "interactive", "exposure", "example", "description", "discipline", "demonstration", "presentation", "discussion", "conversation", "dialogue", "debate", "didactical"]
+        stopwords = ["understand", "program", "student", "case", "week", "explanation", "course", "exposition", "concept", "study", "interactive", "exposure", "example", "description", "discipline", "demonstration", "presentation", "discussion", "conversation", "dialogue", "debate", "didactical"]
         stopwords.extend(nltk.corpus.stopwords.words('english'))
         return stopwords
 
