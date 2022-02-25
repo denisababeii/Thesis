@@ -4,7 +4,7 @@ from typing import List, Dict
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-class ContentBasedRecommender:
+class ContentBasedFilteringRecommender:
     def __init__(self, courses):
         self.courses = courses
         self.matrix_similar = self.build_matrix()
@@ -34,3 +34,11 @@ class ContentBasedRecommender:
     def recommend(self, course):
         recom = self.matrix_similar[course]
         return self.filter(recom_course=recom)
+
+    def get_ranking(self, user):
+        compulsory_courses = self.courses[self.courses["Type"] != "Optional"]
+        ranking = []
+        for index, course in compulsory_courses.iterrows():
+            recommendation = self.recommend(course['Name'])
+            ranking.append([list(recommendation.values()), user[index]])
+        return ranking
