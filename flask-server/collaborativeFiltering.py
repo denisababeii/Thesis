@@ -9,7 +9,7 @@ NO_COMPULSORY = 10
 
 
 class CollaborativeFilteringRecommender:
-    def __init__(self, grades_file='flask-server\GRADES.csv'):
+    def __init__(self, grades_file='GRADES.csv'):
         self.grades = pd.read_csv(grades_file)
 
     def get_ranking(self, user):

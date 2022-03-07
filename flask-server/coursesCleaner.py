@@ -9,7 +9,7 @@ import pandas as pd
 # nltk.download('wordnet')
 
 class CoursesCleaner:
-    def __init__(self, file='flask-server\COURSES.csv'):
+    def __init__(self, file='COURSES.csv'):
         self.courses = pd.read_csv(file, encoding='cp1252')
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
