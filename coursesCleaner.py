@@ -1,13 +1,17 @@
 import nltk
-nltk.download('stopwords')
-nltk.download('words')
-nltk.download('omw-1.4')
 import string
 import pandas as pd
 
+nltk.download('stopwords')
+nltk.download('words')
+nltk.download('omw-1.4')
+nltk.download('punkt')
+nltk.download('wordnet')
+
+
 class CoursesCleaner:
     def __init__(self, file='COURSES.csv'):
-        self.courses = pd.read_csv(file)
+        self.courses = pd.read_csv(file, encoding='cp1252')
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
         self.words = set(nltk.corpus.words.words())
@@ -17,34 +21,37 @@ class CoursesCleaner:
     def get_courses(self):
         return self.courses
 
-    def define_stopwords(self):
-        stopwords = ["understand", "program", "student", "case", "week", "explanation", "course", "exposition", "concept", "study", "interactive", "exposure", "example", "description", "discipline", "demonstration", "presentation", "discussion", "conversation", "dialogue", "debate", "didactical"]
+    @staticmethod
+    def define_stopwords():
+        stopwords = ["understand", "program", "student", "case", "week", "explanation", "course", "exposition",
+                     "concept", "study", "interactive", "exposure", "example", "description", "discipline",
+                     "demonstration", "presentation", "discussion", "conversation", "dialogue", "debate", "didactical"]
         stopwords.extend(nltk.corpus.stopwords.words('english'))
         return stopwords
 
     def process_description(self, description):
         description = description.split()
-        cleanDescription = []
+        clean_description = []
         for desc in description:
-            d = "".join([char for char in desc if char not in string.punctuation]) # remove punctuations
-            d = d.lower() #converting to lowercase letters
-            d = ' '.join([word for word in d.split() if word not in (self.stopwords)]) # remove stopwords
+            d = "".join([char for char in desc if char not in string.punctuation])  # remove punctuations
+            d = d.lower()  # converting to lowercase letters
+            d = ' '.join([word for word in d.split() if word not in self.stopwords])  # remove stopwords
             d = ' '.join([word for word in d.split() if len(word) >= 2])
-            cleanDescription.append(d)
+            clean_description.append(d)
 
-        cleanDescription = ' '.join(cleanDescription)
+        clean_description = ' '.join(clean_description)
 
         # Tokenization
-        ProcessedDescription = nltk.word_tokenize(cleanDescription)
-        
-        # Stemming
-        ProcessedDescription = [self.ps.stem(word) for word in ProcessedDescription]
-        
-        # lemmatization
-        ProcessedDescription = [self.wn.lemmatize(word) for word in ProcessedDescription]
-        
-        ProcessedDescription = [word for word in ProcessedDescription if len(word) >= 2]
+        processed_description = nltk.word_tokenize(clean_description)
 
-        ProcessedDescription = ' '.join(w for w in ProcessedDescription if w in self.words)
-        
-        return ProcessedDescription
+        # Stemming
+        processed_description = [self.ps.stem(word) for word in processed_description]
+
+        # Lemmatization
+        processed_description = [self.wn.lemmatize(word) for word in processed_description]
+
+        processed_description = [word for word in processed_description if len(word) >= 2]
+
+        processed_description = ' '.join(w for w in processed_description if w in self.words)
+
+        return processed_description
