@@ -23,5 +23,5 @@ def result():
     result = merger.merge(cbf_ranking, cf_ranking, user_preference)
     return {"result": result}
 
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(debug=True)
