@@ -37,9 +37,6 @@ class CollaborativeFilteringRecommender:
             mark_list.append(f"Elective {i + 1} Mark")
         marks = grouped[mark_list]
 
-        marks.drop(marks[(marks['Elective 1 Mark'] < 50) | (marks['Elective 2 Mark'] < 50) | (
-                marks['Elective 3 Mark'] < 50)].index, inplace=True)
-
         marks["Average"] = marks[mark_list].mean(axis=1)
         marks = marks.sort_values(by=['Average'], ascending=False)
 
