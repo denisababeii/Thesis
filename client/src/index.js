@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
@@ -9,12 +8,18 @@ import {
   Footer,
   Home
 } from "./components"
+import GradesForm from './components/GradesForm';
+import PreferenceForm from './components/PreferenceForm'
+import Result from './components/Result'
 
 ReactDOM.render(
   <Router>
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/grades" element={<GradesForm />} />
+      <Route path="/preference" element={<PreferenceForm />} />
+      <Route path="/result" element={<Result />} />
     </Routes>
     <Footer />
   </Router>,

@@ -8,7 +8,7 @@ function Navigation() {
             <nav className="navbar navbar-expand navbar-dark bg-dark">
                 <div className="container">
                     <NavLink className="navbar-brand" to="/">
-                        Elective Course Recommender
+                    <img src="icon.png" alt="Icon" width="85" height="85"></img>
                     </NavLink>
                     <div>
                         <ul className="navbar-nav ml-auto">

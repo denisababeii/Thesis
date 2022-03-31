@@ -1,27 +1,22 @@
-const [data, setData] = useState([{}])
+import React from "react";
 
-useEffect(() => {
-    fetch("/result").then(
-        res => res.json()
-    ).then(
-        data => {
-            setData(data)
-            console.log(data)
-        }
-    )
-}, [])
+function Result() {
+    return (
+        <div className="about">
+            <div className="container h-100 d-flex">
+                <div className="jumbotron my-auto">
+                    <h1 className="display-3">Hooray!</h1>
+                    <p className="lead">
+                        Here are our top suggestions for you!
+                    </p>
 
-return (
-    <div>
-        {(typeof data.result === 'undefined') ? (
-            <p>Loading...</p>
-        ): ( 
-            data.result.map((item, i) => (
-                <p key={i}>{item.map((subitem, j) => (
-                    <div>{subitem}</div>
-                )
-                )}</p>
-            ))
-        )}
-    </div>
-)
+                    <p className="lead">
+                        We hope this will guide you in your decision. Thank you for using the Elective Course Recommender and wish you good luck in your final year!
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Result;
