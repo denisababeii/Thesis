@@ -14,3 +14,33 @@
     -webkit-transform: scale(1.1);
     background: radial-gradient(circle, rgba(76,106,255,1) 0%, rgba(241,225,255,1) 100%);
 }
+
+.two-col-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.two-col-item {
+    padding: 20px;
+    text-align: left;
+    width: 400px;
+    display: inline-block;
+}
+
+.one-col-box {
+    display: grid;
+    justify-content: center;
+
+}
+
+.one-col-item {
+    text-align: left;
+    width: 400px;
+    padding: 10px;
+}
+
+.jumbotron-custom {
+    padding-top: 10em;
+    margin: auto;
+}
