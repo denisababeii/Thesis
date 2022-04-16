@@ -1,6 +1,7 @@
 import nltk
 import string
 import pandas as pd
+import configparser
 
 # nltk.download('stopwords')
 # nltk.download('words')
@@ -9,8 +10,8 @@ import pandas as pd
 # nltk.download('wordnet')
 
 class CoursesCleaner:
-    def __init__(self, file='COURSES.csv'):
-        self.courses = pd.read_csv(file, encoding='cp1252')
+    def __init__(self):
+        self.courses = pd.read_csv(self.get_file(), encoding='cp1252')
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
         self.words = set(nltk.corpus.words.words())
@@ -19,6 +20,11 @@ class CoursesCleaner:
 
     def get_courses(self):
         return self.courses
+
+    def get_file(self):
+        parser = configparser.ConfigParser()
+        parser.read("config.txt")
+        return parser.get("config", "courses")
 
     @staticmethod
     def define_stopwords():

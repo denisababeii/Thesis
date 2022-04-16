@@ -11,7 +11,7 @@ function GradesForm() {
         navigate(path);
     }
 
-    const courses = ['Object-Oriented Programming', 'Data Structures and Algorithms','Database Management Systems','Computer Systems Architecture','Functional Programming','Software Enigneering','Formal Languages and Compiler Design','Operating Systems','Web Development','Parallel and Distributed Programming']
+    const courses = [] // GET THEM FROM SERVER!!!!!
     const comboboxes = []
     const grades= []
 

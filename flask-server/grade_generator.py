@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import configparser
 
 def process_grades(grades):
     grades = grades.tolist()
@@ -55,8 +56,10 @@ def generate_grades_elective(file, packages):
         generate_grades_per_package(df, package)
     df.to_excel(file, index=False)
 
-file = "grades.xlsx"
-compulsory_courses = ['OOP', 'DSA', 'DBMS', 'ASC', 'FP', 'SE', 'FLCD', 'OS', 'WEBDEV', 'PDP']
+parser = configparser.ConfigParser()
+parser.read("config.txt")
+file = parser.get("config", "grades")
+compulsory_courses = parser.get("config", "compulsory_courses").split(",")
 generate_grades_compulsory(compulsory_courses, file)
-packages = ['Elective 1', 'Elective 2', 'Elective 3']
+packages = parser.get("config", "packages").split(",")
 generate_grades_elective(file, packages)

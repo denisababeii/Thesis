@@ -22,19 +22,19 @@ function PreferencesForm() {
                         <div className="one-col-item">
                             <label>First Elective</label>
                             <Combobox
-                                data={["Computer vision and deep learning","Public-key cryptography","Audio-video data processing"]}/>
+                                data={[]}/> //GET IT FROM SERVER!!!!!
                         </div>
 
                         <div className="one-col-item">
                             <label>Second Elective</label>
                             <Combobox
-                                data={["Virtual Reality","Cloud Application Architecture"]}/>
+                                data={[]}/> //GET IT FROM SERVER!!!!!
                         </div>
 
                         <div className="one-col-item">
                             <label>Third Elective</label>
                             <Combobox
-                                data={["Team Project","Research Project"]}/>
+                                data={[]}/> //GET IT FROM SERVER!!!!!
                         </div>
                     </div>
                     <button className="btn-change" onClick={routeChange}>See your result!</button>

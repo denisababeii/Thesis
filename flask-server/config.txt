@@ -1,0 +1,26 @@
+[config]
+compulsory_courses = OOP,DSA,DBMS,ASC,FP,AI,FLCD,OS,MOBILE,NET
+elective_courses = AT,IOT,SNA,DP,ACD,CH,EI
+packages = Elective 1,Elective 2,Elective 3
+elective_1 = Android Things,Computer Science Investigations : IoT,System and Network Administration
+elective_2 = Design Patterns,Advanced Compiler Design
+elective_3 = Computer History,Academic ethics and integrity
+grades = grades.xlsx
+courses = COURSES.csv
+OOP = Object-Oriented Programming 
+DSA = Data Structures and Algorithms
+DBMS = Database Management Systems
+ASC = Computer Systems Architecture
+FP = Functional Programming
+AI = Artificial Intelligence
+FLCD = Formal Languages and Compiler Design
+OS = Operating Systems
+MOBILE = Mobile Application Programming
+NET = Computer Networks
+AT = Android Things
+IOT = Computer Science Investigations : IoT
+SNA = System and Network Administration
+DP = Design Patterns
+ACD = Advanced Compiler Design
+CH = Computer History
+EI = Academic ethics and integrity

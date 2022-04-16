@@ -16,7 +16,7 @@ function Result() {
                     <h1 className="display-3">Hooray!</h1>
                     <p className="lead">
                         Here are our top 3 suggestions for you!<br></br>
-                        {result}
+                        {result} // FORMAT THIS
                         <br></br>
                         We hope this will guide you in your decision. Thank you for using the Elective Course Recommender and wish you good luck in your final year!
                     </p>

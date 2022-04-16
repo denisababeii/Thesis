@@ -1,20 +1,27 @@
 import pandas as pd
 from scipy import spatial
+import configparser
 
 pd.options.mode.chained_assignment = None  # Ignore False Positive warning
 # See post https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
 
-NO_PACKAGES = 3  # these I can compute in the hybrid as in ContentBased
-NO_COMPULSORY = 10
-
-
 class CollaborativeFilteringRecommender:
-    def __init__(self, grades_file='GRADES.csv'):
-        self.grades = pd.read_csv(grades_file)
+    def __init__(self):
+        self.grades = []
+        self.noPackages = 0
+        self.noCompulsory = 0
+        self.get_configurations()
 
+    def get_configurations(self):
+        parser = configparser.ConfigParser()
+        parser.read("config.txt")
+        self.grades = pd.read_excel(parser.get("config", "grades"))
+        self.noPackages = len(parser.get("config", "packages").split(","))
+        self.noCompulsory = len(parser.get("config", "compulsory_courses").split(","))
+        
     def get_ranking(self, user):
         cols = list(self.grades.columns.values)
-        compulsory_courses = self.grades[cols[1:NO_COMPULSORY + 1]]
+        compulsory_courses = self.grades[cols[1:self.noCompulsory + 1]]
 
         similarity = pd.DataFrame(index=range(len(compulsory_courses)))
         similarity['Cosine Similarity'] = 0
@@ -28,12 +35,12 @@ class CollaborativeFilteringRecommender:
         similar_data = similar_data.head(int(len(similar_data) * (percentage / 100)))
 
         elective_list = []
-        for i in range(NO_PACKAGES):
+        for i in range(self.noPackages):
             elective_list.append(f"Elective {i + 1}")
         grouped = similar_data.groupby(elective_list).mean()
 
         mark_list = []
-        for i in range(NO_PACKAGES):
+        for i in range(self.noPackages):
             mark_list.append(f"Elective {i + 1} Mark")
         marks = grouped[mark_list]
 

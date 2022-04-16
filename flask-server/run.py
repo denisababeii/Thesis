@@ -1,7 +1,7 @@
 from merger import Merger
-from contentBased import ContentBasedFilteringRecommender
-from coursesCleaner import CoursesCleaner
-from collaborativeFiltering import CollaborativeFilteringRecommender
+from content_based import ContentBasedFilteringRecommender
+from courses_cleaner import CoursesCleaner
+from collaborative import CollaborativeFilteringRecommender
 from flask import Flask, request, session
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def result():
     cf_recommender = CollaborativeFilteringRecommender()
     cf_ranking = cf_recommender.get_ranking(grades)
 
-    merger = Merger(30, 40, 30)
+    merger = Merger(50, 20, 30)
     result = merger.merge(cbf_ranking, cf_ranking, preference)
     return {"result": result}
 

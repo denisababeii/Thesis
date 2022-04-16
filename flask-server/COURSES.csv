@@ -3,196 +3,196 @@ ID,Name,Description,Type,Semester,Package
 problems and to learn the C++ programming language, as well as
 to create graphical user interfaces using Qt. To demonstrate the differences between traditional imperative
 design and object-oriented design.
-• To explain class structures as fundamental, modular building blocks.
-• To understand the role of inheritance, polymorphism, dynamic
+ï¿½ To explain class structures as fundamental, modular building blocks.
+ï¿½ To understand the role of inheritance, polymorphism, dynamic
 binding and generic structures in building reusable code.
-• To explain and to use defensive programming strategies, employing
+ï¿½ To explain and to use defensive programming strategies, employing
 formal assertions and exception handling.
-• To write small/medium scale C++ programs using Qt.
-• To use classes written by other programmers when constructing their
+ï¿½ To write small/medium scale C++ programs using Qt.
+ï¿½ To use classes written by other programmers when constructing their
 systems. Basic elements in C
-• Basic elements of C/C++ language
-• Lexical elements. Operators. Conversions
-• Data types. Variables. Constants
-• Visibility scope and lifetime of the variables
-• C++ Statements • Function declaration and definition. Function
+ï¿½ Basic elements of C/C++ language
+ï¿½ Lexical elements. Operators. Conversions
+ï¿½ Data types. Variables. Constants
+ï¿½ Visibility scope and lifetime of the variables
+ï¿½ C++ Statements ï¿½ Function declaration and definition. Function
 overloading. Inline functions
 2. Modular programming in C/C++
-• Functions. Parameters
-• Pointers and memory management
-• Function pointers
-• Header files. Libraries
-• Modular implementations of ADTs
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Functions. Parameters
+ï¿½ Pointers and memory management
+ï¿½ Function pointers
+ï¿½ Header files. Libraries
+ï¿½ Modular implementations of ADTs
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 3. Object oriented programming in C++
-• Classes and objects
-• Defining classes
-• Object creation and destruction
-• Operator overloading
-• Static and friend elements
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Classes and objects
+ï¿½ Defining classes
+ï¿½ Object creation and destruction
+ï¿½ Operator overloading
+ï¿½ Static and friend elements
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 4. Templates and the Standard Template Library
-• Function templates
-• Class templates
-• Containers, iterators in STL
-• STL algorithms
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Function templates
+ï¿½ Class templates
+ï¿½ Containers, iterators in STL
+ï¿½ STL algorithms
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 5. Inheritance
-• Simple inheritance and derived classes
-• Special functions in classes and inheritance
-• Substitution principle
-• Method overriding
-• Multiple inheritance
-• UML class diagrams and relations
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Simple inheritance and derived classes
+ï¿½ Special functions in classes and inheritance
+ï¿½ Substitution principle
+ï¿½ Method overriding
+ï¿½ Multiple inheritance
+ï¿½ UML class diagrams and relations
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 6. Polymorphism
-• Inheritance, polymorphism
-• Static and dynamic binding
-• Virtual methods
-• Upcasting and downcasting
-• Abstract classes
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Inheritance, polymorphism
+ï¿½ Static and dynamic binding
+ï¿½ Virtual methods
+ï¿½ Upcasting and downcasting
+ï¿½ Abstract classes
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 7. Streams and exception handling
-• Input/Output streams
-• Insertion and extraction operators
-• Formatting. Manipulators. Flags
-• Text files
-• Exception handling. Exception-safe code
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Input/Output streams
+ï¿½ Insertion and extraction operators
+ï¿½ Formatting. Manipulators. Flags
+ï¿½ Text files
+ï¿½ Exception handling. Exception-safe code
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 8. Resource management and RAII
-• Resource Acquisition Is Initialization (RAII)
-• Smart pointers
-• RAII in STL. Smart pointers in STL
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Resource Acquisition Is Initialization (RAII)
+ï¿½ Smart pointers
+ï¿½ RAII in STL. Smart pointers in STL
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 9. Graphical User Interfaces (GUI)
-• Qt Toolkit: installation, Qt modules and instruments
-• Qt GUI components
-• Layout management
-• Qt Designer
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical Event driven programming elements
-• Callbacks
-• Events. Signals and slots in Qt
-• GUI design
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Qt Toolkit: installation, Qt modules and instruments
+ï¿½ Qt GUI components
+ï¿½ Layout management
+ï¿½ Qt Designer
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical Event driven programming elements
+ï¿½ Callbacks
+ï¿½ Events. Signals and slots in Qt
+ï¿½ GUI design
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 11. Event driven programming elements
-• Model View Controller pattern
-• Models and Views in Qt
-• Using predefined models. Implementing custom models
-• Case study: Gene manager application
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Model View Controller pattern
+ï¿½ Models and Views in Qt
+ï¿½ Using predefined models. Implementing custom models
+ï¿½ Case study: Gene manager application
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 12. Design patterns
-• Creational, structural, behavioural patterns
-• Examples
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Creational, structural, behavioural patterns
+ï¿½ Examples
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 13. Design patterns
-• Adapter pattern
-• Observer pattern
-• Iterator pattern
-• Composite pattern
-• Strategy pattern
-• Case study application and examples
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Adapter pattern
+ï¿½ Observer pattern
+ï¿½ Iterator pattern
+ï¿½ Composite pattern
+ï¿½ Strategy pattern
+ï¿½ Case study application and examples
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration
 14. Revision
-• Revision of the most important topics covered by the
+ï¿½ Revision of the most important topics covered by the
 course
-• Examination guide
-• Interactive exposure
-• Explanation
-• Conversation
-• Examples
-• Didactical
+ï¿½ Examination guide
+ï¿½ Interactive exposure
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Examples
+ï¿½ Didactical
 demonstration",Compulsory,2,0
 2,DSA,"Study of data structures (arrays, linked lists, heaps, hash tables, binary
 trees) that can be used to implement abstract data types.
-• Study of the concept of abstract data type and the most frequently used
+ï¿½ Study of the concept of abstract data type and the most frequently used
 abstract data types in application development.
-• Study of the data structures that can be used to implement these
+ï¿½ Study of the data structures that can be used to implement these
 abstract data types.
-• Develop the ability to work with data stored in different data structures
+ï¿½ Develop the ability to work with data stored in different data structures
 and to compare the complexities of their operations.
-• Develop the ability to choose the appropriate data structure in order to
+ï¿½ Develop the ability to choose the appropriate data structure in order to
 model and solve real world problems.
-• Acquire knowledge necessary to work with existing data
+ï¿½ Acquire knowledge necessary to work with existing data
 structure/abstract data type libraries. Introduction. Data structures. Abstract
 Data Types
-• Data abstractization and encapsulation
-• Pseudocode conventions
-• Complexities Arrays. Iterators
-• Dynamic array
-• Amortized analysis
-• Interface of an iterator
+ï¿½ Data abstractization and encapsulation
+ï¿½ Pseudocode conventions
+ï¿½ Complexities Arrays. Iterators
+ï¿½ Dynamic array
+ï¿½ Amortized analysis
+ï¿½ Interface of an iterator
 - Exposure
 - Description
 - Conversation
 - Didactical
 demonstration
 3. Abstract Data Types
-• ADT Set: description, domain,
+ï¿½ ADT Set: description, domain,
 interface and possible representations
-• ADT Map: description, domain,
+ï¿½ ADT Map: description, domain,
 interface and possible representations
-• ADT Matrix: description, domain,
+ï¿½ ADT Matrix: description, domain,
 interface and possible representations
-• ADT MultiMap: description, domain,
+ï¿½ ADT MultiMap: description, domain,
 interface and possible representations
 - Exposure
 - Description
@@ -200,16 +200,16 @@ interface and possible representations
 - Didactical
 demonstration
 4. Abstract Data Types II
-• ADT Stack: description, domain,
+ï¿½ ADT Stack: description, domain,
 interface and possible representations
-• ADT Queue: description, domain,
+ï¿½ ADT Queue: description, domain,
 interface and possible representations
-• ADT PriorityQueue: description,
+ï¿½ ADT PriorityQueue: description,
 domain, interface and possible
 representations
-• ADT Deque: description, domain,
+ï¿½ ADT Deque: description, domain,
 interface and possible representations
-• ADT List: description, domain,
+ï¿½ ADT List: description, domain,
 interface and possible representations
 - Exposure
 - Description
@@ -217,11 +217,11 @@ interface and possible representations
 - Didactical
 demonstration
 5. Linked Lists
-• Singly linked list: representation and
+ï¿½ Singly linked list: representation and
 operations
-• Doubly linked list: representation and
+ï¿½ Doubly linked list: representation and
 operations
-• Iterator for linked lists
+ï¿½ Iterator for linked lists
 - Exposure
 - Description
 - Conversation
@@ -229,11 +229,11 @@ operations
 demonstration
 - Case study
 6. Linked Lists II
-• Sorted linked lists: representation and
+ï¿½ Sorted linked lists: representation and
 operations
-• Circular linked lists: representation
+ï¿½ Circular linked lists: representation
 and operations
-• Linked lists on arrays: representation
+ï¿½ Linked lists on arrays: representation
 and operations
 - Exposure
 - Description
@@ -241,34 +241,34 @@ and operations
 - Didactical
 demonstration
 7. Binary Heap
-• Representation, specific operations
-• HeapSort
+ï¿½ Representation, specific operations
+ï¿½ HeapSort
 - Exposure
 - Description
 - Conversation
 - Didactical
 demonstration
 8. Hash Table
-• Direct address tables
-• Hash tables: description, properties
-• Collision resolution through separate
+ï¿½ Direct address tables
+ï¿½ Hash tables: description, properties
+ï¿½ Collision resolution through separate
 chaining
 - Exposure
 - Description
 - Conversation
 - Didactical
-demonstration • Collision resolution through coalesced
+demonstration ï¿½ Collision resolution through coalesced
 chaining
-• Collision resolution through open
+ï¿½ Collision resolution through open
 addressing
 - Description
 - Conversation
 - Didactical
 demonstration
 10. Hash tables
-• Perfect hashing
-• Linked hash tables
-• Containers represented over hash
+ï¿½ Perfect hashing
+ï¿½ Linked hash tables
+ï¿½ Containers represented over hash
 tables
 - Exposure
 - Description
@@ -276,13 +276,13 @@ tables
 - Didactical
 demonstration
 11. Trees
-• Concepts related to trees
-• Applications of trees
+ï¿½ Concepts related to trees
+ï¿½ Applications of trees
 Binary Trees
-• Description, properties
-• Domain and interface of ADT Binary
+ï¿½ Description, properties
+ï¿½ Domain and interface of ADT Binary
 Tree
-• Tree traversals: recursive/non
+ï¿½ Tree traversals: recursive/non
 recursive algorithms.
 - Exposure
 - Description
@@ -290,10 +290,10 @@ recursive algorithms.
 - Didactical
 demonstration
 12. Binary Search Trees
-• Description, properties
-• Representation
-• Operations: recursive and nonrecursive algorithms
-• Containers represented over binary
+ï¿½ Description, properties
+ï¿½ Representation
+ï¿½ Operations: recursive and nonrecursive algorithms
+ï¿½ Containers represented over binary
 search tables
 - Exposure
 - Description
@@ -301,7 +301,7 @@ search tables
 - Didactical
 demonstration
 13. Balanced Binary Search Trees
-• AVL Trees
+ï¿½ AVL Trees
 - Exposure
 - Description
 - Conversation
@@ -379,8 +379,8 @@ components
 and its native low-level workflow. Awareness of the architectural impact on
 designing and implementing high level programming languages.
 Understanding the impact of the 80x86 processor architecture on Windows
-functioning and limitations. Awareness of the triade computer architecture –
-operating systems – programming languages and their interactions as the basic
+functioning and limitations. Awareness of the triade computer architecture ï¿½
+operating systems ï¿½ programming languages and their interactions as the basic
 core of Computer Science. Data representation: elementary data, binary representation and
 placement orders, data organizing and storing
 Exposure,
@@ -399,7 +399,7 @@ Computing systems architecture: organization of a CS, the central
 processing unit, the system clock, computer on n bits, the storage,
 peripheral devices.
 4
-CS performances, the 80x86 microprocessor’s architecture – general
+CS performances, the 80x86 microprocessorï¿½s architecture ï¿½ general
 view of its structure. The address computation mechanism,
 addressing modes, far addresses and near addresses.
 5 The Executive Unit (EU) of the 80x86 microprocessor: role and functions of the general EU registers and the flags. Classifications
@@ -431,7 +431,7 @@ code, entry code, exit code, the import-export directives EXTRN and
 GLOBAL.
 12
 Linking NASM modules with modules written in high-level
-programming languages (case study – C programming language).
+programming languages (case study ï¿½ C programming language).
 Recursive call extensive example discussion.
 13
 Windows static and dynamic libraries: LIB vs. DLL. NASM output
@@ -630,7 +630,7 @@ exposure
 ? Examples
 ? Didactical
 demonstration",Compulsory,1,0
-6,SE,"Be able to understand software production life cycle
+6,AI,"Be able to understand software production life cycle
 ? Improved skills on developing software
 7.2 Specific objective of the
 discipline
@@ -696,14 +696,14 @@ studies
 ",Compulsory,4,0
 7,FLCD,"Be able to understand compiler design and to implement compiler
 techniques
-• Improved programming skills
+ï¿½ Improved programming skills
 7.2 Specific objective of the
 discipline
-• Acquire knowledge about back-end of a compiler
-• Understand and work with formal languages concepts: Chomsky hierarchy;
+ï¿½ Acquire knowledge about back-end of a compiler
+ï¿½ Understand and work with formal languages concepts: Chomsky hierarchy;
 regular grammars, finite automata and the equivalence between them;
 context-free grammars, push-down automata and their equivalence
-• Understand and work with compilers concepts: scanning, parsing General Structure of a compiler. Compiler phases Exposure: description,
+ï¿½ Understand and work with compilers concepts: scanning, parsing General Structure of a compiler. Compiler phases Exposure: description,
 explanation, examples,
 discussion of case
 studies
@@ -765,92 +765,92 @@ studies
 ",Compulsory,5,0
 8,OS,"Learning the main entities and concepts that operates in operating
 systems: processes and files.
-· The base station processes the binding of files and communication
+ï¿½ The base station processes the binding of files and communication
 between processes.
-· Learning programming bases specific operating systems: type scripting
+ï¿½ Learning programming bases specific operating systems: type scripting
 language programming (sh, bash, PowerShell) and use system functions
 in standard C language.
-· Presentation of the case studies, the enitatilor, concepts and APIs
+ï¿½ Presentation of the case studies, the enitatilor, concepts and APIs
 operating processes provided by the Unix family of operating systems
 (Solaris, Linux, BSD, etc)
 7.2 Specific objective of the
 discipline
-· Unix operating system: introduction.
-· Programming Shell.
-· Windows Introduction: bat file commands
-· Unix file system: tree structure and connections.
-· Unix Operating System I / O, processes signals.
-· Communication between Unix processes.
-· Installation and configuration of operating systems Week. 1 Unix: Introduction.
+ï¿½ Unix operating system: introduction.
+ï¿½ Programming Shell.
+ï¿½ Windows Introduction: bat file commands
+ï¿½ Unix file system: tree structure and connections.
+ï¿½ Unix Operating System I / O, processes signals.
+ï¿½ Communication between Unix processes.
+ï¿½ Installation and configuration of operating systems Week. 1 Unix: Introduction.
  Unix commands and arguments.
  Regular Expression, generic specification of
 files.
  Filters and text editors.
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 2 Shell Programming.
  Sh Processors.
  Variables, control structures (if, for, while, do,
 case).
  Embedded commands.
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
- Remarcable shell variables. · Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ Remarcable shell variables. ï¿½ Didactical
 demonstration
 Week. 3. Windows: introduction.
  Commands and arguments.
  Files and paths; Access rights
  Command bat files
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 4 OS Unix: processes.
  Unix processes; structure, API (fork, wait,
 exec, exit, system, popen).
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 5 POSIX Threads
  Concepts.
  API: create, exit, join.
  Mutex variables.
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 6 Unix File System; I/O operations.
  Hard and symbolic links.
  Mounting.
  File access rights
  open, close, read, write, lseek, file lock.
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 7 General Theory of Operating Systems
  Classifications.
  Functions
  Architectures.
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation Didactical
+ï¿½ Explanation
+ï¿½ Conversation Didactical
 demonstration
 Week. 8 Processes.
  Concepts
@@ -859,63 +859,63 @@ Week. 8 Processes.
  Critical sectioons and race conditions
  Deadlock.
  Processes scheduling
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 9 Memory management
  Architecture
  Alocatiopns: partitioned, paging, segmentation.
  Swapping
  Memory scheduling
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
 Week. 10 Phisical I/O
  I/O chanels
  Zone tampon.
  Disk access scheduling
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration Week. 11 File Systems
  Concepts
  Low-level implementations.
  Directories
  Jurnalization; copy-on-write
  Example: FAT, EXT3, NTFS
-· Interactive
+ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
-Week. 12 Operating systems booting · Interactive
+Week. 12 Operating systems booting ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
-Week. 13 Linux kernel · Interactive
+Week. 13 Linux kernel ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration
-Week. 14 Windows kernel · Interactive
+Week. 14 Windows kernel ï¿½ Interactive
 exposure
-· Explanation
-· Conversation
-· Didactical
+ï¿½ Explanation
+ï¿½ Conversation
+ï¿½ Didactical
 demonstration",Compulsory,2,0
-9,WEBDEV,"? To introduce students to modern techniques for web programming
+9,MOBILE,"? To introduce students to modern techniques for web programming
 using both server-side and client-side technologies. The course is
 meant as an introductory course in web technologies.
 7.2 Specific objective of the
@@ -929,16 +929,16 @@ Exposure:description,
 explanation,examples,
 discussion of case
 studies
-2. HTML – HyperText Markup Language.
+2. HTML ï¿½ HyperText Markup Language.
 HTML 5
 Exposure:description,
 explanation,examples,
 discussion of case
-studies HTTP – HyperText Transfer Protocol Exposure:description,
+studies HTTP ï¿½ HyperText Transfer Protocol Exposure:description,
 explanation,examples,
 discussion of case
 studies
-4. CSS – Cascading Style Sheets. CSS3.
+4. CSS ï¿½ Cascading Style Sheets. CSS3.
 Responsive design. Web fonts and icons. CSS
 preprocessors.
 Exposure:description,
@@ -949,7 +949,7 @@ studies
 explanation,examples,
 discussion of case
 studies
-6. DOM – Document Object Model. The
+6. DOM ï¿½ Document Object Model. The
 Javascript language: fundamental concepts,
 functions, objects, collections, async
 programming (setTimeout, promises).
@@ -966,7 +966,7 @@ studies
 explanation,examples,
 discussion of case
 studies
-9. JSON – Javascript Object Notation Exposure:description,
+9. JSON ï¿½ Javascript Object Notation Exposure:description,
 explanation,examples,
 discussion of case
 studies
@@ -996,7 +996,7 @@ Exposure:description,
 explanation,examples,
 discussion of case
 studies",Compulsory,4,0
-10,PDP,"Aquire the main concepts of concurrent, parallel and distributed
+10,NET,"Aquire the main concepts of concurrent, parallel and distributed
 programming;
 ? Basics of communication between processes and threads, on the same
 machine or on distinct machines;
@@ -1084,7 +1084,7 @@ Exposition, concepts,
 examples, case study.
 14. Distributed file systems Exposition, concepts,
 examples, case study.",Compulsory,5,0
-11,NLP,"To introduce the basic principles, domains and tasks in Natural
+11,AT,"To introduce the basic principles, domains and tasks in Natural
 Language Processing (NLP)
 ? To understand the current state of the art in order to realize an
 overview of a specific domain in NLP and to implement a NLP tool.
@@ -1153,7 +1153,7 @@ examples, debate,
 dialogue
 Course 9. Anaphora resolution
 - Lapin and Lease algorithm
-- Mitkov’s algorithm
+- Mitkovï¿½s algorithm
 Exposure: description,
 explanation,
 examples, debate,
@@ -1172,7 +1172,7 @@ dialogue
 Course 12. Written exam Exposure: description,
 explanation,
 examples, debate,",Optional,5,1
-12,AR_VR,"Introducing the students to virtual reality environment programming.
+12,IOT,"Introducing the students to virtual reality environment programming.
 The students should learn the following concepts: general structure of
 a virtual reality application, human interaction with the virtual
 environment through the use of input devices, modeling (visual,
@@ -1234,7 +1234,7 @@ practical examples,
 demonstrations,
 case-study
 discussions",Optional,5,1
-13,SVV,"Enhance the students understanding of testing and test design techniques.
+13,SNA,"Enhance the students understanding of testing and test design techniques.
 ? Provide the students with an environment in which they can explore the
 usage and usefulness of software testing and test design concepts in
 various business scenarios.
@@ -1244,7 +1244,7 @@ and their inherent benefits.
 discipline
 ? Give students the ability to explore various test design techniques
 applied to different levels of testing.
-? Improve the students’ abilities to tackle on goal driven testing.
+? Improve the studentsï¿½ abilities to tackle on goal driven testing.
 ? Enhance the students understanding of test design techniques value in
 business.
 ? Students will be able to use various tools for the testing process (i.e., test
@@ -1342,7 +1342,7 @@ demonstration
 11. Essay Presentations ? Interactive exposure
 ? Conversation
 12. Essay Presentations ? Interactive expos",Optional,5,1
-14,CC,"To introduce the students to cloud computing concepts, the motivation
+14,DP,"To introduce the students to cloud computing concepts, the motivation
 behind migrating to the cloud and the challenges such a migration entails.
 ? Walk through a relatable, real life use case and point out the benefits of
 using a public cloud provider in most commercial software endeavours.
@@ -1412,14 +1412,14 @@ explanation, examples, debate
 Exposure: description,
 explanation, examples, debate
 14. Recap and closing Examples, debate",Optional,5,2
-15,CS,"Be able to understand compiler design and to implement compiler
+15,ACD,"Be able to understand compiler design and to implement compiler
 techniques
-• Be able to understand compiler optimizations
-• Improved programming skills
+ï¿½ Be able to understand compiler optimizations
+ï¿½ Improved programming skills
 7.2 Specific objective of the
 discipline
-• Acquire knowledge about back-end of a compiler
-• Understand concepts: virtual machine, JIT compilation, compiler
+ï¿½ Acquire knowledge about back-end of a compiler
+ï¿½ Understand concepts: virtual machine, JIT compilation, compiler
 optimizations, machine code generation Review compiler phases. Semantic analysis.
 Define attribute grammar. [1,4]
 Conversation: debate,
@@ -1436,10 +1436,10 @@ explanation, example
 4. Functions: activation record [2,3] exposure: description,
 explanation, example;
 dialogue, case studies
-5. Static analysis – part 1 [2,3,4] exposure: description,
+5. Static analysis ï¿½ part 1 [2,3,4] exposure: description,
 explanation, example,
 dialogue, debate
-6. Static analysis – part II [2,3,4] exposure: description,
+6. Static analysis ï¿½ part II [2,3,4] exposure: description,
 explanation, example,
 discussion of case studies
 7. Compiler design for imperative and objectoriented languages (I): Identification, Type
@@ -1477,7 +1477,7 @@ debate
 13. .NET Language Design [4,5,6] exposure: description,
 explanation, example,
 case studies,",Optional,5,2
-16,IOT,"Embedded IoT development competencies
+16,CH,"Embedded IoT development competencies
 Scientific method of research
 Analysis and formalization of problems requiring computer science
 methods and models
@@ -1560,16 +1560,16 @@ software product
 Interactive exposure
 Explanation Conversation
 Didactical demonstration",Optional,6,3
-17,ML,"Interpretation of mathematical and programming models.
-• Enhance the students understanding of programming paradigms
-• To emphasize the relation between theory of programing paradigms
+17,EI,"Interpretation of mathematical and programming models.
+ï¿½ Enhance the students understanding of programming paradigms
+ï¿½ To emphasize the relation between theory of programing paradigms
 with their concrete applications in languages
 7.2 Specific objective of the
 discipline
-• Deepen the knowledge of programming in Java, C#, C++.
-• Learn new programming languages.
-• Introduction in Scala programming and other multiparadigm
-languages (Kotlin, Go, Ruby, Julia…). Programing paradigm overview
+ï¿½ Deepen the knowledge of programming in Java, C#, C++.
+ï¿½ Learn new programming languages.
+ï¿½ Introduction in Scala programming and other multiparadigm
+languages (Kotlin, Go, Ruby, Juliaï¿½). Programing paradigm overview
 Exposure: description, explanation,
 examples, discussion of case
 studies
