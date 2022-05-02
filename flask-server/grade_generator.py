@@ -5,16 +5,16 @@ import configparser
 
 def process_grades(grades):
     grades = grades.tolist()
-    for subindex in range(len(grades)):
+    for index in range(len(grades)):
         # Transform to integer values
-        grades[subindex] = int(grades[subindex])
+        grades[index] = int(grades[index])
         
-        # The values out of the interval [6,10] 
+        # The values out of the interval [5,10] 
         # are rounded to the margins
-        if grades[subindex] < 6:
-            grades[subindex] = 6
-        if grades[subindex] > 10:
-            grades[subindex] = 10
+        if grades[index] < 5:
+            grades[index] = 5
+        if grades[index] > 10:
+            grades[index] = 10
     return grades
 
 def generate_grades_per_package(df, package):
@@ -37,14 +37,14 @@ def generate_grades_compulsory(compulsory_courses, file):
         grades = np.random.normal(mu, sigma, size)
 
         # Display the histogram of the samples
-        # plt.hist(grades, 25, density=True)
-        # plt.show()
+        plt.hist(grades, 25, density=True)
+        plt.show()
 
         grades = process_grades(grades)
 
         # Display the histogram of the samples
-        # plt.hist(grades, 25, density=True)
-        # plt.show()
+        plt.hist(grades, 25, density=True)
+        plt.show()
 
         df[compulsory_courses[index]] = grades
 

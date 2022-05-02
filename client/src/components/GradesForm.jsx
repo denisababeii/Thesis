@@ -1,8 +1,8 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Combobox from "react-widgets/Combobox";
 import "react-widgets/styles.css";
 import "./style.css"
+import React, { useState, useEffect } from "react";
 
 function GradesForm() {
     let navigate = useNavigate();
@@ -10,8 +10,14 @@ function GradesForm() {
         let path = `/preference`;
         navigate(path);
     }
+    const [courses, setCourses] = useState([]);
 
-    const courses = [] // GET THEM FROM SERVER!!!!!
+    useEffect(() => {
+        fetch('/compulsory').then(res => res.json()).then(data => {
+          setCourses(data.courses);
+        });
+      }, []);
+
     const comboboxes = []
     const grades= []
 
@@ -20,7 +26,7 @@ function GradesForm() {
         <div className="two-col-item">
             <label>{course}</label>
             <Combobox
-                data={["10", "9", "8", "7", "6", "Not yet passed"]}/>
+                data={["10", "9", "8", "7", "6", "5", "Not yet passed"]}/>
         </div>
         )
       }

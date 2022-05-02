@@ -4,7 +4,7 @@ from collaborative import CollaborativeFilteringRecommender
 from merger import Merger
 
 grades=[6, 7, 8, 9, 10, 8, 7, 8, 9, 10]
-preference=["IOT", "ACD", "EI", 10]
+preference=[",Computer science investigations -an iot perspective", "Advanced compiler design", "Academic ethics and integrity (in computer science)", 10]
 
 courses = CoursesCleaner().get_courses()
 

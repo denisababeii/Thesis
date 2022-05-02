@@ -11,7 +11,7 @@ import configparser
 
 class CoursesCleaner:
     def __init__(self):
-        self.courses = pd.read_csv(self.get_file(), encoding='cp1252')
+        self.courses = pd.read_excel(self.get_file())
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
         self.words = set(nltk.corpus.words.words())

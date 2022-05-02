@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Combobox from "react-widgets/Combobox";
 import "react-widgets/styles.css";
@@ -9,6 +9,27 @@ function PreferencesForm() {
         let path = `/result`; 
         navigate(path);
     }
+
+    const [electives1, setElectives1] = useState([]);
+    const [electives2, setElectives2] = useState([]);
+    const [electives3, setElectives3] = useState([]);
+
+    useEffect(() => {
+        fetch('/electives1').then(res => res.json()).then(data => {
+          setElectives1(data.courses);
+        });
+      }, []);
+
+      useEffect(() => {
+        fetch('/electives2').then(res => res.json()).then(data => {
+          setElectives2(data.courses);
+        });
+
+      }, []);    useEffect(() => {
+        fetch('/electives3').then(res => res.json()).then(data => {
+          setElectives3(data.courses);
+        });
+      }, []);
 
     return (
         <div>
@@ -22,19 +43,19 @@ function PreferencesForm() {
                         <div className="one-col-item">
                             <label>First Elective</label>
                             <Combobox
-                                data={[]}/> //GET IT FROM SERVER!!!!!
+                                data={electives1}/>
                         </div>
 
                         <div className="one-col-item">
                             <label>Second Elective</label>
                             <Combobox
-                                data={[]}/> //GET IT FROM SERVER!!!!!
+                                data={electives2}/>
                         </div>
 
                         <div className="one-col-item">
                             <label>Third Elective</label>
                             <Combobox
-                                data={[]}/> //GET IT FROM SERVER!!!!!
+                                data={electives3}/>
                         </div>
                     </div>
                     <button className="btn-change" onClick={routeChange}>See your result!</button>

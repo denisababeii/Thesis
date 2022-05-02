@@ -1,5 +1,5 @@
 ID,Name,Description,Type,Semester,Package
-1,OOP,"To prepare an object-oriented design of small/medium scale
+1,Object-Oriented Programming,"To prepare an object-oriented design of small/medium scale
 problems and to learn the C++ programming language, as well as
 to create graphical user interfaces using Qt. To demonstrate the differences between traditional imperative
 design and object-oriented design.
@@ -161,7 +161,7 @@ course
 � Examples
 � Didactical
 demonstration",Compulsory,2,0
-2,DSA,"Study of data structures (arrays, linked lists, heaps, hash tables, binary
+2,Data Structures and Algorithms,"Study of data structures (arrays, linked lists, heaps, hash tables, binary
 trees) that can be used to implement abstract data types.
 � Study of the concept of abstract data type and the most frequently used
 abstract data types in application development.
@@ -317,7 +317,7 @@ in different programming languages
 - Didactical
 demonstration
 9. Hash Table - Exposure",Compulsory,2,0
-3,DBMS,"To get acquainted with the fundamental concepts concerning databases
+3,Database Management Systems,"To get acquainted with the fundamental concepts concerning databases
 ? To gain a thorough understanding of the relational data model
 ? To manage (to create, to modify) relational databases in SQL Server
 ? To analyze data using complex SQL queries
@@ -372,7 +372,7 @@ presentation
 Conversation
 Examples
 Explanation",Compulsory,3,0
-4,ASC,"Understanding by the students of the computer architecture models, processor
+4,Computer Systems Architecture,"Understanding by the students of the computer architecture models, processor
 functioning, computer information representation usage
 comprehension of the microprocessor architecture and functioning
 components
@@ -444,7 +444,7 @@ The interaction between user programs and the OS kernel. The
 virtual memory concept. Overview of the segmentation and paging
 process. Protection setup sample code: real-mode to protected-mode
 transition and 32-bit segments.",Compulsory,1,0
-5,FP,"To know the basic concepts of software engineering (design,
+5,Functional Programming,"To know the basic concepts of software engineering (design,
 implementation and maintenance
 7.2 Specific objectives of
 the discipline
@@ -630,7 +630,7 @@ exposure
 ? Examples
 ? Didactical
 demonstration",Compulsory,1,0
-6,AI,"Be able to understand software production life cycle
+6,Artificial Intelligence,"Be able to understand software production life cycle
 ? Improved skills on developing software
 7.2 Specific objective of the
 discipline
@@ -694,7 +694,7 @@ explanation, examples,
 discussion of case
 studies
 ",Compulsory,4,0
-7,FLCD,"Be able to understand compiler design and to implement compiler
+7,Formal Languages and Compiler Design,"Be able to understand compiler design and to implement compiler
 techniques
 � Improved programming skills
 7.2 Specific objective of the
@@ -763,7 +763,7 @@ explanation, examples,
 discussion of case
 studies
 ",Compulsory,5,0
-8,OS,"Learning the main entities and concepts that operates in operating
+8,Operating Systems,"Learning the main entities and concepts that operates in operating
 systems: processes and files.
 � The base station processes the binding of files and communication
 between processes.
@@ -915,7 +915,7 @@ exposure
 � Conversation
 � Didactical
 demonstration",Compulsory,2,0
-9,MOBILE,"? To introduce students to modern techniques for web programming
+9,Mobile Application Programming,"? To introduce students to modern techniques for web programming
 using both server-side and client-side technologies. The course is
 meant as an introductory course in web technologies.
 7.2 Specific objective of the
@@ -996,7 +996,7 @@ Exposure:description,
 explanation,examples,
 discussion of case
 studies",Compulsory,4,0
-10,NET,"Aquire the main concepts of concurrent, parallel and distributed
+10,Computer Networks,"Aquire the main concepts of concurrent, parallel and distributed
 programming;
 ? Basics of communication between processes and threads, on the same
 machine or on distinct machines;
@@ -1084,7 +1084,7 @@ Exposition, concepts,
 examples, case study.
 14. Distributed file systems Exposition, concepts,
 examples, case study.",Compulsory,5,0
-11,AT,"To introduce the basic principles, domains and tasks in Natural
+11,Android Things,"To introduce the basic principles, domains and tasks in Natural
 Language Processing (NLP)
 ? To understand the current state of the art in order to realize an
 overview of a specific domain in NLP and to implement a NLP tool.
@@ -1172,7 +1172,7 @@ dialogue
 Course 12. Written exam Exposure: description,
 explanation,
 examples, debate,",Optional,5,1
-12,IOT,"Introducing the students to virtual reality environment programming.
+12,Computer Science Investigations : IoT,"Introducing the students to virtual reality environment programming.
 The students should learn the following concepts: general structure of
 a virtual reality application, human interaction with the virtual
 environment through the use of input devices, modeling (visual,
@@ -1234,7 +1234,7 @@ practical examples,
 demonstrations,
 case-study
 discussions",Optional,5,1
-13,SNA,"Enhance the students understanding of testing and test design techniques.
+13,System and Network Administration,"Enhance the students understanding of testing and test design techniques.
 ? Provide the students with an environment in which they can explore the
 usage and usefulness of software testing and test design concepts in
 various business scenarios.
@@ -1342,7 +1342,7 @@ demonstration
 11. Essay Presentations ? Interactive exposure
 ? Conversation
 12. Essay Presentations ? Interactive expos",Optional,5,1
-14,DP,"To introduce the students to cloud computing concepts, the motivation
+14,Design Patterns,"To introduce the students to cloud computing concepts, the motivation
 behind migrating to the cloud and the challenges such a migration entails.
 ? Walk through a relatable, real life use case and point out the benefits of
 using a public cloud provider in most commercial software endeavours.
@@ -1412,7 +1412,7 @@ explanation, examples, debate
 Exposure: description,
 explanation, examples, debate
 14. Recap and closing Examples, debate",Optional,5,2
-15,ACD,"Be able to understand compiler design and to implement compiler
+15,Advanced Compiler Design,"Be able to understand compiler design and to implement compiler
 techniques
 � Be able to understand compiler optimizations
 � Improved programming skills
@@ -1477,7 +1477,7 @@ debate
 13. .NET Language Design [4,5,6] exposure: description,
 explanation, example,
 case studies,",Optional,5,2
-16,CH,"Embedded IoT development competencies
+16,Computer History,"Embedded IoT development competencies
 Scientific method of research
 Analysis and formalization of problems requiring computer science
 methods and models
@@ -1560,7 +1560,7 @@ software product
 Interactive exposure
 Explanation Conversation
 Didactical demonstration",Optional,6,3
-17,EI,"Interpretation of mathematical and programming models.
+17,Academic ethics and integrity,"Interpretation of mathematical and programming models.
 � Enhance the students understanding of programming paradigms
 � To emphasize the relation between theory of programing paradigms
 with their concrete applications in languages
