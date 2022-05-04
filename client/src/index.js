@@ -11,15 +11,25 @@ import {
 import GradesForm from './components/GradesForm';
 import PreferenceForm from './components/PreferenceForm'
 import Result from './components/Result'
+import Login from './components/Login'
+import CreateAccount from './components/CreateAccount'
+import UserProfile from './components/UserProfile'
+import CourseInfo from './components/CourseInfo'
 
 ReactDOM.render(
   <Router>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/account" element={<CreateAccount />} />
+    </Routes>
     <Navigation />
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/grades" element={<GradesForm />} />
       <Route path="/preference" element={<PreferenceForm />} />
       <Route path="/result" element={<Result />} />
+      <Route path="/info" element={<CourseInfo />} />
+      <Route path="/profile" element={<UserProfile />} />
+      <Route path="/" element={<Home />} />
     </Routes>
     <Footer />
   </Router>,

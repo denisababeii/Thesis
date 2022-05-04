@@ -3,6 +3,8 @@ import Combobox from "react-widgets/Combobox";
 import "react-widgets/styles.css";
 import "./style.css"
 import React, { useState, useEffect } from "react";
+import Loading from "./Loading";
+import { trackPromise } from 'react-promise-tracker'
 
 function GradesForm() {
     let navigate = useNavigate();
@@ -13,9 +15,10 @@ function GradesForm() {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
+        trackPromise(
         fetch('/compulsory').then(res => res.json()).then(data => {
           setCourses(data.courses);
-        });
+        }));
       }, []);
 
     const comboboxes = []
@@ -35,10 +38,11 @@ function GradesForm() {
         <div>
             <div className="container h-100 d-flex" style={{paddingBottom:"100px"}}>
                 <div className="jumbotron my-auto jumbotron-custom">
-                    <h1 className="display-3">Tell us about yourself!</h1>
+                    <h1 className="display-3">Tell us about yourself</h1>
                     <p className="lead" style={{"padding-left":"0.5em"}}> 
                         First, we will need a bit of insight on your previous academic performance. <br></br>What were your grades for these subjects?
                     </p>
+                    <Loading></Loading>
                     <div className="two-col-box">
                         {comboboxes}
                     </div>

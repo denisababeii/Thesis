@@ -17,6 +17,24 @@ function Navigation() {
                                     Home
                                     <span className="sr-only">(current)</span>
                                 </NavLink>
+                                </li>
+                                <li>
+                                <NavLink className="nav-link" to="/info">
+                                    Courses
+                                    <span className="sr-only">(current)</span>
+                                </NavLink>
+                                </li>
+                                <li>
+                                <NavLink className="nav-link" to="/profile">
+                                    Profile
+                                    <span className="sr-only">(current)</span>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="nav-link" style={{color:"rgba(96,106,255,1)"}} to="/login">
+                                    Log out
+                                    <span className="sr-only">(current)</span>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

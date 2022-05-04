@@ -5,8 +5,7 @@ import configparser
 import pandas as pd
 import fitz
 
-def info(pdf_path):
-    path = "https://www.cs.ubbcluj.ro" + pdf_path
+def info(path):
     response = requests.get(path)
 
     filestream = io.BytesIO(response.content)
@@ -39,8 +38,10 @@ def parse_pdf():
 
     df = pd.read_excel(file)
     for course, link in list_of_pdf:
-        content = info(link)
+        path = "https://www.cs.ubbcluj.ro" + link
+        content = info(path)
         df.at[df["Name"] == course, "Description"] = content
+        df.at[df["Name"] == course, "Link"] = path
         df.to_excel(file, index=False)
 
 parse_pdf()

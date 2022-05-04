@@ -13,6 +13,19 @@ class Merger:
                 return index
         return -1
 
+    def format(self, ranking):
+        ranking = ranking[0:3]
+        result = []
+        for rank in ranking:
+            string_format=""
+            for i in range(len(rank)-1):
+                if i == len(rank)-2:
+                    string_format += rank[i]
+                else:
+                    string_format += rank[i]+", "
+            result.append(string_format)
+        return result
+
     def merge(self, cbf_ranking, cf_ranking, user_preference):
         final_ranking = []
 
@@ -40,4 +53,4 @@ class Merger:
 
         final_ranking.append(user_preference)
         final_ranking.sort(key=lambda x: x[3], reverse=True)
-        return final_ranking
+        return self.format(final_ranking)

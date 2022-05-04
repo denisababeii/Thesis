@@ -44,3 +44,10 @@
     padding-top: 10em;
     margin: auto;
 }
+
+#form_login {
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+}

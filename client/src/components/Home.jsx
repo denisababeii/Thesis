@@ -10,7 +10,7 @@ function Home() {
     }
     return (
         <div>
-            <div className="container h-100 d-flex">
+            <div className="container h-100 d-flex" style={{paddingBottom:"100px"}}>
                 <div className="jumbotron my-auto jumbotron-custom">
                     <h1 className="display-3">About</h1>
                     <p className="lead">

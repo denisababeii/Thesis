@@ -35,10 +35,11 @@ function PreferencesForm() {
         <div>
             <div className="container h-100 d-flex" style={{paddingBottom:"100px"}}>
                 <div className="jumbotron my-auto jumbotron-custom">
-                    <h1 className="display-3">Just one more step!</h1>
+                    <h1 className="display-3">Just one more step</h1>
                     <p className="lead">
                         Your opinion matters!<br></br>Which of these courses sound interesting to you?
                     </p>
+                    
                     <div className="one-col-box">
                         <div className="one-col-item">
                             <label>First Elective</label>
