@@ -51,3 +51,38 @@
     position  : absolute;
     transform : translate(-50%, -50%);
 }
+
+.li-result {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.li-result:last-child {
+    border: 0;
+}
+
+.li-course-info {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.li-course-info:last-child {
+    border: 0;
+}
+
+.li-course-info:hover {
+    background-color: rgba(135,155,255,0.3);
+}
+
+.ul-course-info{
+    list-style:none;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    display:block
+}

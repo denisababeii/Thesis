@@ -1,16 +1,34 @@
 import { useNavigate } from "react-router-dom";
-import Combobox from "react-widgets/Combobox";
 import "react-widgets/styles.css";
 import "./style.css"
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import { trackPromise } from 'react-promise-tracker'
+import Combobox from "react-widgets/Combobox";
 
 function GradesForm() {
     let navigate = useNavigate();
     const routeChange = () => {
-        let path = `/preference`;
-        navigate(path);
+        var grades = []
+        for(var c of choice) {
+            if (c === "Not yet passed")
+                grades.push(0)
+            else
+                grades.push(parseInt(c))
+        }
+        console.log(grades)
+        fetch('/grades', {
+            method: 'POST', 
+            headers : {
+                'Content-Type':'application/json'
+          },
+            body: JSON.stringify(grades)
+        }).then(function(response){ 
+            console.log("OK");   
+           }).then(() => {
+            let path = `/preference`;
+            navigate(path);
+           })
     }
     const [courses, setCourses] = useState([]);
 
@@ -22,21 +40,28 @@ function GradesForm() {
       }, []);
 
     const comboboxes = []
-    const grades= []
+    const [choice, setChoice] = useState([]);
 
     for (const [i, course] of courses.entries()) {
         comboboxes.push (
         <div className="two-col-item">
             <label>{course}</label>
             <Combobox
-                data={["10", "9", "8", "7", "6", "5", "Not yet passed"]}/>
+            value={choice[i]}
+            data={["10", "9", "8", "7", "6", "5", "Not yet passed"]}
+            onChange={value => {
+                let newArr = [...choice]
+                newArr[i] = value;
+                setChoice(newArr);
+            }}
+        />
         </div>
         )
       }
 
     return (
         <div>
-            <div className="container h-100 d-flex" style={{paddingBottom:"100px"}}>
+            <div className="container h-100 d-flex" style={{paddingBottom:"150px"}}>
                 <div className="jumbotron my-auto jumbotron-custom">
                     <h1 className="display-3">Tell us about yourself</h1>
                     <p className="lead" style={{"padding-left":"0.5em"}}> 

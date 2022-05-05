@@ -21,7 +21,7 @@ function Result() {
                         Here are our top 3 suggestions for you!
                     </p>
                         <Loading></Loading>
-                        <ul>{result.map(course => <li key={course}> <p className="lead">{course}</p> </li>)}</ul>
+                        <ul className="ul-course-info">{result.map(course => <li className="li-result" key={course}> <p className="lead">{course}</p> </li>)}</ul>
                     <p className="lead">
                     We hope this will guide you in your decision. Thank you for using the Elective Course Recommender and wish you good luck in your final year!
                     Curious to find out more about these courses? Take a look at our <a href="/info" style={{color: "rgba(135,55,255,1)"}}>Courses</a> section for more!</p>

@@ -9,19 +9,30 @@ from get_electives_links import Elective_Links
 
 app = Flask(__name__)
 
-@app.route("/grades")
+@app.route("/grades", methods=['POST'])
 def get_grades():
-    session['grades'] = request.json['grades']
+    grades = request.get_json()
+    data = session.pop('data', None)
+    data['grades'] = grades
+    session['data'] = data
+    print(session['data'])
+    return "OK"
 
-@app.route("/preference")
+@app.route("/preference", methods=['POST'])
 def get_preference():
-    session['preference'] = request.json['preference']
-
+    preference = request.get_json()
+    data = session.pop('data', None)
+    data['preference'] = preference
+    session['data'] = data
+    print(session['data'])
+    return "OK"
+    
 @app.route("/compulsory")
 def send_courses():
     parser = configparser.ConfigParser()
     parser.read("config.txt")
     courses = parser.get("config", "compulsory_courses").split(",")
+    session['data'] = {'grades':None, 'preference':None}
     return {"courses": courses}
 
 @app.route("/electives1")
@@ -52,11 +63,11 @@ def send_electives_links():
 
 @app.route("/result")
 def result():
-    #grades = session.pop('grades')
-    #preference = session.pop('preference')
-    grades=[6, 7, 8, 9, 10, 8, 7, 8, 9, 10]
-    preference=["Computer science investigations -an iot perspective", "Advanced compiler design", "Academic ethics and integrity (in computer science)", 10]
-
+    data = session.pop('data', None)
+    grades = data['grades']
+    preference = data['preference']
+    preference.append(10)
+    
     courses = CoursesCleaner().get_courses()
 
     cbf_recommender = ContentBasedFilteringRecommender(courses)

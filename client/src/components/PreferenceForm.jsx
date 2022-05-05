@@ -6,8 +6,19 @@ import "react-widgets/styles.css";
 function PreferencesForm() {
     let navigate = useNavigate(); 
     const routeChange = () => { 
-        let path = `/result`; 
+        console.log(choice)
+        fetch('/preference', {
+          method: 'POST', 
+          headers : {
+            'Content-Type':'application/json'
+      },
+          body: JSON.stringify(choice)
+      }).then(function(response){ 
+        console.log("OK");   
+       }).then(() => {
+        let path = `/result`;
         navigate(path);
+       })
     }
 
     const [electives1, setElectives1] = useState([]);
@@ -31,6 +42,8 @@ function PreferencesForm() {
         });
       }, []);
 
+      const [choice, setChoice] = useState([]);
+
     return (
         <div>
             <div className="container h-100 d-flex" style={{paddingBottom:"100px"}}>
@@ -44,19 +57,34 @@ function PreferencesForm() {
                         <div className="one-col-item">
                             <label>First Elective</label>
                             <Combobox
-                                data={electives1}/>
+                                data={electives1}
+                                onChange={value => {
+                                  let newArr = [...choice]
+                                  newArr[0] = value;
+                                  setChoice(newArr);
+                              }}/>
                         </div>
 
                         <div className="one-col-item">
                             <label>Second Elective</label>
                             <Combobox
-                                data={electives2}/>
+                                data={electives2}
+                                onChange={value => {
+                                  let newArr = [...choice]
+                                  newArr[1] = value;
+                                  setChoice(newArr);
+                              }}/>
                         </div>
 
                         <div className="one-col-item">
                             <label>Third Elective</label>
                             <Combobox
-                                data={electives3}/>
+                                data={electives3}
+                                onChange={value => {
+                                  let newArr = [...choice]
+                                  newArr[2] = value;
+                                  setChoice(newArr);
+                              }}/>
                         </div>
                     </div>
                     <button className="btn-change" onClick={routeChange}>See your result!</button>

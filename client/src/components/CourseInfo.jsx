@@ -4,6 +4,7 @@ import './style.css';
 import Combobox from "react-widgets/Combobox";
 import Loading from "./Loading";
 import { trackPromise } from 'react-promise-tracker'
+import './style.css';
 
 function CourseInfo() {
     const [electives, setElectives] = useState([]);
@@ -22,7 +23,7 @@ function CourseInfo() {
                     <h1 className="display-4">Have a quick look at the available electives</h1>
                     <p className="lead">Click any elective to find out more about it!</p>
                     <Loading></Loading>
-                    <ul>{electives.map(course => <li key={course}> <a className="lead" href={course[1]} style={{color: "rgba(135,55,255,1)"}}>{course[0]}</a> </li>)}</ul>
+                    <ul className="ul-course-info">{electives.map(course => <li className="li-course-info" key={course}> <a className="button lead" href={course[1]} style={{color: "rgba(0,0,0,1)"}}>{course[0]}</a> </li>)}</ul>
                 </div>
             </div>
         </div>
