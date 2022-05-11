@@ -1,10 +1,11 @@
 import React from "react";
 import './style.css';
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
-function Home() {
+function Home(props) {
     let navigate = useNavigate(); 
-    const routeChange = () =>{ 
+    const routeChange = () =>{
       let path = `/grades`; 
       navigate(path);
     }
@@ -19,6 +20,7 @@ function Home() {
                     <button className="btn-change" onClick={routeChange}>Get your match now!</button>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

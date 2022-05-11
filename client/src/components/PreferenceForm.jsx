@@ -2,47 +2,104 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Combobox from "react-widgets/Combobox";
 import "react-widgets/styles.css";
+import Footer from "./Footer";
+import Navigation from "./Navigation";
+import axios from "axios";
+import { trackPromise } from "react-promise-tracker";
 
-function PreferencesForm() {
+function PreferencesForm(props) {
     let navigate = useNavigate(); 
-    const routeChange = () => { 
-        console.log(choice)
-        fetch('/preference', {
-          method: 'POST', 
-          headers : {
-            'Content-Type':'application/json'
+    const [electives1, setElectives1] = useState([]);
+    const [electives2, setElectives2] = useState([]);
+    const [electives3, setElectives3] = useState([]);
+    const [choice, setChoice] = useState([]);
+
+    const routeChange = () => {
+      console.log(choice)
+      axios({
+        method: "POST",
+        url:"/preference",
+        headers : {
+            'content-type':'application/json',
+            Authorization: 'Bearer ' + props.token
       },
-          body: JSON.stringify(choice)
+      data:{
+        preference: JSON.stringify(choice)
+      }
       }).then(function(response){ 
         console.log("OK");   
        }).then(() => {
         let path = `/result`;
         navigate(path);
-       })
+       }).catch((error) => {
+        if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    })
     }
 
-    const [electives1, setElectives1] = useState([]);
-    const [electives2, setElectives2] = useState([]);
-    const [electives3, setElectives3] = useState([]);
+    useEffect(() => {
+      console.log(props)
+      axios({
+        method: "GET",
+        url:"/electives1",
+        headers : {
+            Authorization: 'Bearer ' + props.token
+      }
+      })
+      .then((response) => {
+        const res =response.data
+        setElectives1(res.courses)
+      }).catch((error) => {
+        if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+    },[]);
 
     useEffect(() => {
-        fetch('/electives1').then(res => res.json()).then(data => {
-          setElectives1(data.courses);
-        });
-      }, []);
-
-      useEffect(() => {
-        fetch('/electives2').then(res => res.json()).then(data => {
-          setElectives2(data.courses);
-        });
-
-      }, []);    useEffect(() => {
-        fetch('/electives3').then(res => res.json()).then(data => {
-          setElectives3(data.courses);
-        });
-      }, []);
-
-      const [choice, setChoice] = useState([]);
+      axios({
+        method: "GET",
+        url:"/electives2",
+        headers : {
+            Authorization: 'Bearer ' + props.token
+      }
+      })
+      .then((response) => {
+        const res =response.data
+        setElectives2(res.courses)
+      }).catch((error) => {
+        if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+    },[]);  
+      
+    useEffect(() => {
+        axios({
+        method: "GET",
+        url:"/electives3",
+        headers : {
+            Authorization: 'Bearer ' + props.token
+      }
+      })
+      .then((response) => {
+        const res =response.data
+        setElectives3(res.courses)
+      }).catch((error) => {
+        if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+    },[]);  
 
     return (
         <div>
@@ -90,6 +147,7 @@ function PreferencesForm() {
                     <button className="btn-change" onClick={routeChange}>See your result!</button>
                 </div>
             </div>
+          <Footer/>
         </div>
     );
 }

@@ -1,19 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './style.css';
+import axios from "axios";
 
-function Navigation() {
+function Navigation(props) {
+    function logMeOut() {
+        axios({
+          method: "POST",
+          url:"/logout",
+        })
+        .then((response) => {
+           props.removeToken()
+        }).catch((error) => {
+          if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+            }
+        })}
     return (
         <div className="navigation">
             <nav className="navbar navbar-expand navbar-dark bg-dark fixed-top">
                 <div className="container">
-                    <NavLink className="navbar-brand" to="/" >
+                    <NavLink className="navbar-brand" to="/home" >
                     <img src="icon.png" alt="Icon" width="85" height="85"></img>
                     </NavLink>
                     <div>
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/">
+                                <NavLink className="nav-link" to="/home">
                                     Home
                                     <span className="sr-only">(current)</span>
                                 </NavLink>
@@ -31,10 +46,10 @@ function Navigation() {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link" style={{color:"rgba(96,106,255,1)"}} to="/login">
-                                    Log out
-                                    <span className="sr-only">(current)</span>
-                                </NavLink>
+                            <NavLink className="nav-link" to="/" onClick={logMeOut} style={{color:"rgba(76,106,255,1)"}}>
+                                Log out
+                                <span className="sr-only">(current)</span>
+                            </NavLink>
                             </li>
                         </ul>
                     </div>

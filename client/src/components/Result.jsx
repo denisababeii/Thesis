@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { trackPromise } from 'react-promise-tracker'
+import Footer from "./Footer";
 import Loading from "./Loading";
+import Navigation from "./Navigation";
+import axios from "axios";
 
-function Result() {
+function Result(props) {
     const [result, setResult] = useState([]);
-    
-    useEffect(() => {
-        trackPromise(
-        fetch('/result').then(res => res.json()).then(data => {
-          setResult(data.result);
+
+      useEffect(() => {
+          trackPromise(
+        axios({
+          method: "GET",
+          url:"/result",
+          headers : {
+            Authorization: 'Bearer ' + props.token
+        }
+        })
+        .then((response) => {
+          const res =response.data
+          setResult(res.result)
+        }).catch((error) => {
+            if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+            }
         }));
-      }, []);
+      },[]);
 
     return (
         <div>
@@ -27,6 +44,7 @@ function Result() {
                     Curious to find out more about these courses? Take a look at our <a href="/info" style={{color: "rgba(135,55,255,1)"}}>Courses</a> section for more!</p>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

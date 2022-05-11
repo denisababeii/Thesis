@@ -5,10 +5,17 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import { trackPromise } from 'react-promise-tracker'
 import Combobox from "react-widgets/Combobox";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+import axios from "axios";
 
-function GradesForm() {
+function GradesForm(props) {
     let navigate = useNavigate();
-    const routeChange = () => {
+    const [courses, setCourses] = useState([]);
+    const comboboxes = []
+    const [choice, setChoice] = useState([]);
+
+    const routeChange = ()=> {
         var grades = []
         for(var c of choice) {
             if (c === "Not yet passed")
@@ -17,30 +24,51 @@ function GradesForm() {
                 grades.push(parseInt(c))
         }
         console.log(grades)
-        fetch('/grades', {
-            method: 'POST', 
+        axios({
+            method: "POST",
+            url:"/grades",
             headers : {
-                'Content-Type':'application/json'
+                'content-type':'application/json',
+                Authorization: 'Bearer ' + props.token
           },
-            body: JSON.stringify(grades)
+          data:{
+              grades: JSON.stringify(grades)
+          }
         }).then(function(response){ 
             console.log("OK");   
            }).then(() => {
             let path = `/preference`;
             navigate(path);
-           })
+           }).catch((error) => {
+            if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+            }
+        })
     }
-    const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         trackPromise(
-        fetch('/compulsory').then(res => res.json()).then(data => {
-          setCourses(data.courses);
+            axios({
+                method: "GET",
+                url:"/compulsory",
+                headers: {
+                  Authorization: 'Bearer ' + props.token
+                }
+              })
+              .then((response) => {
+                const res =response.data
+                setCourses(res.courses)
+              }
+              ).catch((error) => {
+            if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+            }
         }));
-      }, []);
-
-    const comboboxes = []
-    const [choice, setChoice] = useState([]);
+            },[]);
 
     for (const [i, course] of courses.entries()) {
         comboboxes.push (
@@ -74,6 +102,7 @@ function GradesForm() {
                     <button className="btn-change" onClick={routeChange}>Next</button>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }
