@@ -18,6 +18,7 @@ function Login(props) {
     const [validated, setValidated] = useState(false);
 
     function logMeIn(event) {
+    setValidated(false)
     axios({
         method: "POST",
         url:"/login",
@@ -29,7 +30,6 @@ function Login(props) {
     .then((response) => {
         props.setToken(response.data.access_token)
         props.setUsername(loginForm.username)
-        setValidated(false)
     }
     ).then(()=>{
         let path = `/home`;

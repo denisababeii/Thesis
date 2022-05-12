@@ -8,12 +8,16 @@ import Combobox from "react-widgets/Combobox";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import axios from "axios";
+import {Modal, Button, Form} from "react-bootstrap"
 
 function GradesForm(props) {
     let navigate = useNavigate();
     const [courses, setCourses] = useState([]);
     const comboboxes = []
     const [choice, setChoice] = useState([]);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const routeChange = ()=> {
         var grades = []
@@ -23,7 +27,15 @@ function GradesForm(props) {
             else
                 grades.push(parseInt(c))
         }
-        console.log(grades)
+
+        let count = 0
+        for (let grade of grades)
+            if (grade)
+              count++
+            
+        if(count != comboboxes.length)
+            setShow(true)
+        else {
         axios({
             method: "POST",
             url:"/grades",
@@ -46,6 +58,7 @@ function GradesForm(props) {
             console.log(error.response.headers)
             }
         })
+        }
     }
 
     useEffect(() => {
@@ -81,7 +94,8 @@ function GradesForm(props) {
                 let newArr = [...choice]
                 newArr[i] = value;
                 setChoice(newArr);
-            }}
+            }
+            }
         />
         </div>
         )
@@ -98,6 +112,19 @@ function GradesForm(props) {
                     <Loading></Loading>
                     <div className="two-col-box">
                         {comboboxes}
+                    </div>
+                    <div>
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header>
+                        <Modal.Title>Oops!</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>You must fill in all the grades before moving on to the next step!</Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        </Modal.Footer>
+                    </Modal>
                     </div>
                     <button className="btn-change" onClick={routeChange}>Next</button>
                 </div>

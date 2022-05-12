@@ -17,6 +17,7 @@ function CreateAccount(props) {
     const [validated, setValidated] = useState(false);
 
     function signMeUp(event) {
+        setValidated(false)
         axios({
             method: "POST",
             url:"/signup",
@@ -28,7 +29,6 @@ function CreateAccount(props) {
     .then((response) => {
         props.setToken(response.data.access_token)
         props.setUsername(signupForm.username)
-        setValidated(false)
     }
     ).then(()=>{
         let path = `/home`;

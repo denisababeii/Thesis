@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import axios from "axios";
 import { trackPromise } from "react-promise-tracker";
+import {Modal, Button} from "react-bootstrap"
 
 function PreferencesForm(props) {
     let navigate = useNavigate(); 
@@ -13,31 +14,40 @@ function PreferencesForm(props) {
     const [electives2, setElectives2] = useState([]);
     const [electives3, setElectives3] = useState([]);
     const [choice, setChoice] = useState([]);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const routeChange = () => {
-      console.log(choice)
-      axios({
-        method: "POST",
-        url:"/preference",
-        headers : {
-            'content-type':'application/json',
-            Authorization: 'Bearer ' + props.token
-      },
-      data:{
-        preference: JSON.stringify(choice)
-      }
-      }).then(function(response){ 
-        console.log("OK");   
-       }).then(() => {
-        let path = `/result`;
-        navigate(path);
-       }).catch((error) => {
-        if (error.response) {
-        console.log(error.response)
-        console.log(error.response.status)
-        console.log(error.response.headers)
+      var count = 0
+      for (let item of choice)
+          if (item)
+            count++
+      if(count !== 3)
+          setShow(true)
+      else {
+        axios({
+          method: "POST",
+          url:"/preference",
+          headers : {
+              'content-type':'application/json',
+              Authorization: 'Bearer ' + props.token
+        },
+        data:{
+          preference: JSON.stringify(choice)
         }
-    })
+        }).then(function(response){ 
+          console.log("OK");   
+        }).then(() => {
+          let path = `/result`;
+          navigate(path);
+        }).catch((error) => {
+          if (error.response) {
+          console.log(error.response)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+          }
+    })}
     }
 
     useEffect(() => {
@@ -109,7 +119,6 @@ function PreferencesForm(props) {
                     <p className="lead">
                         Your opinion matters!<br></br>Which of these courses sound interesting to you?
                     </p>
-                    
                     <div className="one-col-box">
                         <div className="one-col-item">
                             <label>First Elective</label>
@@ -143,6 +152,19 @@ function PreferencesForm(props) {
                                   setChoice(newArr);
                               }}/>
                         </div>
+                    </div>
+                    <div>
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header>
+                        <Modal.Title>Oops!</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>You must fill in all the electives before moving on to the next step!</Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        </Modal.Footer>
+                    </Modal>
                     </div>
                     <button className="btn-change" onClick={routeChange}>See your result!</button>
                 </div>
