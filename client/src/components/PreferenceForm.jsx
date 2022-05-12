@@ -15,6 +15,7 @@ function PreferencesForm(props) {
     const [electives3, setElectives3] = useState([]);
     const [choice, setChoice] = useState([]);
     const [show, setShow] = useState(false);
+    const [error, setError] = useState([]);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -23,7 +24,7 @@ function PreferencesForm(props) {
       for (let item of choice)
           if (item)
             count++
-      if(count !== 3)
+      if(count !== 3 || error.includes(true))
           setShow(true)
       else {
         axios({
@@ -125,10 +126,24 @@ function PreferencesForm(props) {
                             <Combobox
                                 data={electives1}
                                 onChange={value => {
-                                  let newArr = [...choice]
-                                  newArr[0] = value;
-                                  setChoice(newArr);
+                                  if(electives1.includes(value)){
+                                    let newArrError = [...error]
+                                    newArrError[0] = false;
+                                    setError(newArrError);
+                                    let newArr = [...choice]
+                                    newArr[0] = value;
+                                    setChoice(newArr);
+                                  }
+                                  else {
+                                    let newArr = [...choice]
+                                    newArr[0] = value;
+                                    setChoice(newArr);
+                                    let newArrError = [...error]
+                                    newArrError[0] = true;
+                                    setError(newArrError);
+                                  }
                               }}/>
+                              {error[0] && <small style={{color:"red"}}>Please choose a valid elective.</small>}
                         </div>
 
                         <div className="one-col-item">
@@ -136,21 +151,48 @@ function PreferencesForm(props) {
                             <Combobox
                                 data={electives2}
                                 onChange={value => {
-                                  let newArr = [...choice]
-                                  newArr[1] = value;
-                                  setChoice(newArr);
+                                  if(electives2.includes(value)){
+                                    let newArrError = [...error]
+                                    newArrError[1] = false;
+                                    setError(newArrError);
+                                    let newArr = [...choice]
+                                    newArr[1] = value;
+                                    setChoice(newArr);
+                                  }
+                                  else {
+                                    let newArr = [...choice]
+                                    newArr[1] = value;
+                                    setChoice(newArr);
+                                    let newArrError = [...error]
+                                    newArrError[1] = true;
+                                    setError(newArrError);
+                                  }
                               }}/>
+                              {error[1] && <small style={{color:"red"}}>Please choose a valid elective.</small>}
                         </div>
-
                         <div className="one-col-item">
                             <label>Third Elective</label>
                             <Combobox
                                 data={electives3}
                                 onChange={value => {
-                                  let newArr = [...choice]
-                                  newArr[2] = value;
-                                  setChoice(newArr);
+                                  if(electives3.includes(value)){
+                                    let newArrError = [...error]
+                                    newArrError[2] = false;
+                                    setError(newArrError);
+                                    let newArr = [...choice]
+                                    newArr[2] = value;
+                                    setChoice(newArr);
+                                  }
+                                  else {
+                                    let newArr = [...choice]
+                                    newArr[2] = value;
+                                    setChoice(newArr);
+                                    let newArrError = [...error]
+                                    newArrError[2] = true;
+                                    setError(newArrError);
+                                  }
                               }}/>
+                              {error[2] && <small style={{color:"red"}}>Please choose a valid elective.</small>}
                         </div>
                     </div>
                     <div>

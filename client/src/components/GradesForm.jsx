@@ -18,6 +18,7 @@ function GradesForm(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [error, setError] = useState([]);
 
     const routeChange = ()=> {
         var grades = []
@@ -33,7 +34,7 @@ function GradesForm(props) {
             if (grade)
               count++
             
-        if(count != comboboxes.length)
+        if(count != comboboxes.length || error.includes(true))
             setShow(true)
         else {
         axios({
@@ -91,12 +92,26 @@ function GradesForm(props) {
             value={choice[i]}
             data={["10", "9", "8", "7", "6", "5", "Not yet passed"]}
             onChange={value => {
-                let newArr = [...choice]
-                newArr[i] = value;
-                setChoice(newArr);
+                if(["10", "9", "8", "7", "6", "5", "Not yet passed"].includes(value)){
+                    let newArrError = [...error]
+                    newArrError[i] = false;
+                    setError(newArrError);
+                    let newArr = [...choice]
+                    newArr[i] = value;
+                    setChoice(newArr);
+                }
+                else {
+                    let newArr = [...choice]
+                    newArr[i] = value;
+                    setChoice(newArr);
+                    let newArrError = [...error]
+                    newArrError[i] = true;
+                    setError(newArrError);
+                }
             }
             }
         />
+        {error[i] && <small style={{color:"red"}}>Please choose a valid grade.</small>}
         </div>
         )
       }
