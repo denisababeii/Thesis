@@ -1,9 +1,13 @@
 import mysql.connector
+import pandas as pd
 
 class DatabaseUtils:
     def __init__(self):
         self.conn = mysql.connector.connect(host="localhost", user="root", password="", database="elective_recommender")
     
+    def get_connection(self):
+        return self.conn
+
     def do_login(self, username, password):
         record = (username, password)
         cursor = self.conn.cursor()
@@ -124,3 +128,12 @@ class DatabaseUtils:
         cursor.close()
         return result
 
+    def get_courses(self):
+        query = '''SELECT * FROM `courses`'''
+        df = pd.read_sql(query, self.conn)
+        return df
+
+    def get_generated_grades(self):
+        query = '''SELECT * FROM `grades`'''
+        df = pd.read_sql(query, self.conn)
+        return df

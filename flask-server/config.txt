@@ -5,5 +5,3 @@ packages = Elective 1,Elective 2,Elective 3
 elective_1 = Android things,Computer science investigations -an iot perspective,Network and system administration
 elective_2 = Design patterns,Advanced compiler design
 elective_3 = History of computer science,Academic ethics and integrity (in computer science)
-grades = grades.xlsx
-courses = test.xlsx

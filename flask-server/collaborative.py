@@ -6,8 +6,8 @@ pd.options.mode.chained_assignment = None  # Ignore False Positive warning
 # See post https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
 
 class CollaborativeFilteringRecommender:
-    def __init__(self):
-        self.grades = []
+    def __init__(self, grades):
+        self.grades = grades
         self.noPackages = 0
         self.noCompulsory = 0
         self.get_configurations()
@@ -15,7 +15,6 @@ class CollaborativeFilteringRecommender:
     def get_configurations(self):
         parser = configparser.ConfigParser()
         parser.read("config.txt")
-        self.grades = pd.read_excel(parser.get("config", "grades"))
         self.noPackages = len(parser.get("config", "packages").split(","))
         self.noCompulsory = len(parser.get("config", "compulsory_courses").split(","))
         
@@ -36,12 +35,12 @@ class CollaborativeFilteringRecommender:
 
         elective_list = []
         for i in range(self.noPackages):
-            elective_list.append(f"Elective {i + 1}")
+            elective_list.append(f"Elective_{i + 1}")
         grouped = similar_data.groupby(elective_list).mean()
 
         mark_list = []
         for i in range(self.noPackages):
-            mark_list.append(f"Elective {i + 1} Mark")
+            mark_list.append(f"Elective_{i + 1}_Mark")
         marks = grouped[mark_list]
 
         marks["Average"] = marks[mark_list].mean(axis=1)

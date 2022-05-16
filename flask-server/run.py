@@ -79,12 +79,13 @@ def result(username):
     preference = db.get_preference(username)
     preference.append(10)
     
-    courses = CoursesCleaner().get_courses()
+    courses = CoursesCleaner(db).get_courses()
 
     cbf_recommender = ContentBasedFilteringRecommender(courses)
     cbf_ranking = cbf_recommender.get_ranking(grades)
 
-    cf_recommender = CollaborativeFilteringRecommender()
+    generated_grades = db.get_generated_grades()
+    cf_recommender = CollaborativeFilteringRecommender(generated_grades)
     cf_ranking = cf_recommender.get_ranking(grades)
 
     merger = Merger(50, 20, 30)

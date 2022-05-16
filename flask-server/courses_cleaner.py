@@ -10,8 +10,8 @@ import configparser
 # nltk.download('wordnet')
 
 class CoursesCleaner:
-    def __init__(self):
-        self.courses = pd.read_excel(self.get_file())
+    def __init__(self, database):
+        self.courses = database.get_courses()
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
         self.words = set(nltk.corpus.words.words())
@@ -20,11 +20,6 @@ class CoursesCleaner:
 
     def get_courses(self):
         return self.courses
-
-    def get_file(self):
-        parser = configparser.ConfigParser()
-        parser.read("config.txt")
-        return parser.get("config", "courses")
 
     @staticmethod
     def define_stopwords():
