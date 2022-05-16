@@ -32,7 +32,7 @@ function Login(props) {
         props.setUsername(loginForm.username)
     }
     ).then(()=>{
-        let path = `/home`;
+        let path = `/`;
         navigate(path);
     }
     ).catch((error) => {

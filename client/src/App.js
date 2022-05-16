@@ -28,11 +28,11 @@ function App() {
         :(<>
           <Navigation removeToken={removeToken}/>
             <Routes>
-                <Route path="/home" element={<Home token={token} setToken={setToken}/>}></Route>
-                <Route path="/grades" element={<GradesForm token={token} setToken={setToken}/>}></Route>
-                <Route path="/preference" element={<PreferenceForm token={token} setToken={setToken}/>} />
-                <Route path="/result" element={<Result token={token} setToken={setToken}/>} />
-                <Route path="/info" element={<CourseInfo token={token} setToken={setToken}/>} />
+                <Route path="/" element={<Home token={token} setToken={setToken}/>}></Route>
+                <Route path="/grades" element={<GradesForm username={username} token={token} setToken={setToken}/>}></Route>
+                <Route path="/preference" element={<PreferenceForm username={username} token={token} setToken={setToken}/>} />
+                <Route path="/result" element={<Result username={username} token={token} setToken={setToken}/>} />
+                <Route path="/info" element={<CourseInfo username={username} token={token} setToken={setToken}/>} />
                 <Route path="/profile" element={<UserProfile username={username} setUsername={setUsername} token={token} setToken={setToken}/>} />
             </Routes>
           </>

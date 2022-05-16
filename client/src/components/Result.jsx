@@ -12,7 +12,7 @@ function Result(props) {
           trackPromise(
         axios({
           method: "GET",
-          url:"/result",
+          url:"/result/"+props.username,
           headers : {
             Authorization: 'Bearer ' + props.token
         }

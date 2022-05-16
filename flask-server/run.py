@@ -1,3 +1,4 @@
+from matplotlib.style import use
 from merger import Merger
 from content_based import ContentBasedFilteringRecommender
 from courses_cleaner import CoursesCleaner
@@ -7,35 +8,30 @@ import configparser
 import os
 from get_electives_links import Elective_Links
 from datetime import datetime, timedelta, timezone
-from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
+from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
 import json
+from db_util import DatabaseUtils
 
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = "long-and-secret-uncrackable-secret-key"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=4)
 jwt = JWTManager(app)
+db = DatabaseUtils()
 
 @app.route("/grades", methods=['POST'])
 @jwt_required()
 def get_grades():
     grades = json.loads(request.json.get("grades", None))
-    print(grades)
-    data = session.pop('data', None)
-    data['grades'] = grades
-    session['data'] = data
-    # add to database here
-    print(session['data'])
+    username = json.loads(request.json.get("username", None))
+    db.save_grades(username, grades)
     return "OK"
 
 @app.route("/preference", methods=['POST'])
 @jwt_required()
 def get_preference():
     preference = json.loads(request.json.get("preference", None))
-    data = session.pop('data', None)
-    data['preference'] = preference
-    session['data'] = data
-    # add to database here
-    print(session['data'])
+    username = json.loads(request.json.get("username", None))
+    db.save_preference(username, preference)
     return "OK"
     
 @app.route("/compulsory", methods=["GET"])
@@ -44,7 +40,6 @@ def send_courses():
     parser = configparser.ConfigParser()
     parser.read("config.txt")
     courses = parser.get("config", "compulsory_courses").split(",")
-    session['data'] = {'grades':[], 'preference':[]}
     return {"courses": courses}
 
 @app.route("/electives1", methods=['GET'])
@@ -77,13 +72,11 @@ def send_electives_links():
     courses = Elective_Links.get()
     return {"courses": courses}
 
-@app.route("/result", methods=["GET"])
+@app.route("/result/<username>", methods=["GET"])
 @jwt_required()
-def result():
-    data = session.pop('data')
-    grades = data['grades']
-    preference = data['preference']
-    # get from database 
+def result(username):
+    grades = db.get_grades(username)
+    preference = db.get_preference(username)
     preference.append(10)
     
     courses = CoursesCleaner().get_courses()
@@ -97,24 +90,25 @@ def result():
     merger = Merger(50, 20, 30)
     result = merger.merge(cbf_ranking, cf_ranking, preference)[0:3]
     print(result)
-    # add to database
+    db.save_result(username, result)
     return {"result": result}
 
-@app.route("/last_result", methods=["GET"])
+@app.route("/last_result/<username>", methods=["GET"])
 @jwt_required()
-def last_result():
-    #return {"result": ['Computer science investigations -an iot perspective, Advanced compiler design, History of computer science', 'Network and system administration, Advanced compiler design, History of computer science', 'Computer science investigations -an iot perspective, Design patterns, History of computer science']}
-    return {"result":[]}
+def last_result(username):
+    result = db.get_result(username)
+    return {"result":result}
     
 @app.route('/login', methods=["POST"])
 def login():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
-    if username != "test" or password != "test":
-        return {"msg": "Wrong username or password"}, 401
 
-    access_token = create_access_token(identity=username)
-    response = {"access_token":access_token}
+    if db.do_login(username, password) == "FAIL":
+        response = {"access_token": None}, 401
+    else:
+        access_token = create_access_token(identity=username)
+        response = {"access_token":access_token}
     return response
 
 @app.route('/signup', methods=["POST"])
@@ -122,10 +116,11 @@ def signup():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
 
-    # add to database here
-
-    access_token = create_access_token(identity=username)
-    response = {"access_token":access_token}
+    if db.do_signup(username, password) == "FAIL":
+        response = {"access_token": None}, 401
+    else:
+        access_token = create_access_token(identity=username)
+        response = {"access_token":access_token}
     return response
 
 @app.route("/logout", methods=["POST"])

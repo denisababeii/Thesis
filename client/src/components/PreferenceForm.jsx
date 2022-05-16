@@ -35,7 +35,8 @@ function PreferencesForm(props) {
               Authorization: 'Bearer ' + props.token
         },
         data:{
-          preference: JSON.stringify(choice)
+          preference: JSON.stringify(choice),
+          username: JSON.stringify(props.username)
         }
         }).then(function(response){ 
           console.log("OK");   

@@ -13,7 +13,7 @@ function UserProfile(props) {
         trackPromise(
       axios({
         method: "GET",
-        url:"/last_result",
+        url:"/last_result/"+props.username,
         headers : {
           Authorization: 'Bearer ' + props.token
       }
@@ -43,7 +43,7 @@ function UserProfile(props) {
                     {
                         result.length > 0
                         ? <ul className="ul-course-info">{result.map(course => <li className="li-result" key={course}> <p className="lead">{course}</p> </li>)}</ul>
-                        : <p className="lead" style={{paddingRight:"5px", display:"inline-block"}}>Hmm, seems like you have no previous results. Get started <a className="lead" href="/home" style={{color:"rgba(96,106,255,1)"}}>here</a>!</p>
+                        : <p className="lead" style={{paddingRight:"5px", display:"inline-block"}}>Hmm, seems like you have no previous results. Get started <a className="lead" href="/" style={{color:"rgba(96,106,255,1)"}}>here</a>!</p>
                     }
                 </div>
                 </div>

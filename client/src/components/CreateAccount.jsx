@@ -31,7 +31,7 @@ function CreateAccount(props) {
         props.setUsername(signupForm.username)
     }
     ).then(()=>{
-        let path = `/home`;
+        let path = `/`;
         navigate(path);
     }
     ).catch((error) => {

@@ -24,7 +24,7 @@ function GradesForm(props) {
         var grades = []
         for(var c of choice) {
             if (c === "Not yet passed")
-                grades.push(0)
+                grades.push(1)
             else
                 grades.push(parseInt(c))
         }
@@ -45,7 +45,8 @@ function GradesForm(props) {
                 Authorization: 'Bearer ' + props.token
           },
           data:{
-              grades: JSON.stringify(grades)
+              grades: JSON.stringify(grades),
+              username: JSON.stringify(props.username)
           }
         }).then(function(response){ 
             console.log("OK");   
