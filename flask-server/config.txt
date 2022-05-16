@@ -1,7 +1,0 @@
-[config]
-compulsory_courses = Object oriented programming,Data structures and algorithms,Database management systems,Computer systems architecture,Functional and logic programming,Artificial intelligence,Formal languages and compiler design,Operating systems,Mobile application programming,Computer networks
-elective_courses = Android things,Computer science investigations -an iot perspective,Network and system administration,Design patterns,Advanced compiler design,History of computer science,Academic ethics and integrity (in computer science)
-packages = Elective 1,Elective 2,Elective 3
-elective_1 = Android things,Computer science investigations -an iot perspective,Network and system administration
-elective_2 = Design patterns,Advanced compiler design
-elective_3 = History of computer science,Academic ethics and integrity (in computer science)

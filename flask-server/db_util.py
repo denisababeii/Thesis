@@ -137,3 +137,71 @@ class DatabaseUtils:
         query = '''SELECT * FROM `grades`'''
         df = pd.read_sql(query, self.conn)
         return df
+
+    def get_compulsory_courses(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT compulsory_courses FROM `config`
+            '''
+        )
+        compulsory_courses = cursor.fetchone()[0]
+        cursor.close()
+        return compulsory_courses
+
+    def get_elective_courses(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT elective_courses FROM `config`
+            '''
+        )
+        elective_courses = cursor.fetchone()[0]
+        cursor.close()
+        return elective_courses
+
+
+    def get_packages(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT packages FROM `config`
+            '''
+        )
+        packages = cursor.fetchone()[0]
+        cursor.close()
+        return packages
+
+    def get_elective_1(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT elective_1 FROM `config`
+            '''
+        )
+        elective_1 = cursor.fetchone()[0]
+        cursor.close()
+        return elective_1
+
+
+    def get_elective_2(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT elective_2 FROM `config`
+            '''
+        )
+        elective_2 = cursor.fetchone()[0]
+        cursor.close()
+        return elective_2
+
+    def get_elective_3(self):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            '''
+            SELECT elective_3 FROM `config`
+            '''
+        )
+        elective_3 = cursor.fetchone()[0]
+        cursor.close()
+        return elective_3

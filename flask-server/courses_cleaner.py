@@ -1,7 +1,6 @@
 import nltk
 import string
 import pandas as pd
-import configparser
 
 # nltk.download('stopwords')
 # nltk.download('words')

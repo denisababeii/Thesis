@@ -1,22 +1,14 @@
 import pandas as pd
 from scipy import spatial
-import configparser
 
 pd.options.mode.chained_assignment = None  # Ignore False Positive warning
 # See post https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
 
 class CollaborativeFilteringRecommender:
-    def __init__(self, grades):
+    def __init__(self, grades, noPackages, noCompulsory):
         self.grades = grades
-        self.noPackages = 0
-        self.noCompulsory = 0
-        self.get_configurations()
-
-    def get_configurations(self):
-        parser = configparser.ConfigParser()
-        parser.read("config.txt")
-        self.noPackages = len(parser.get("config", "packages").split(","))
-        self.noCompulsory = len(parser.get("config", "compulsory_courses").split(","))
+        self.noPackages = noPackages
+        self.noCompulsory = noCompulsory
         
     def get_ranking(self, user):
         cols = list(self.grades.columns.values)

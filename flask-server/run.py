@@ -4,7 +4,6 @@ from content_based import ContentBasedFilteringRecommender
 from courses_cleaner import CoursesCleaner
 from collaborative import CollaborativeFilteringRecommender
 from flask import Flask, request, session, jsonify
-import configparser
 import os
 from get_electives_links import Elective_Links
 from datetime import datetime, timedelta, timezone
@@ -37,39 +36,31 @@ def get_preference():
 @app.route("/compulsory", methods=["GET"])
 @jwt_required()
 def send_courses():
-    parser = configparser.ConfigParser()
-    parser.read("config.txt")
-    courses = parser.get("config", "compulsory_courses").split(",")
+    courses = db.get_compulsory_courses().split(",")
     return {"courses": courses}
 
 @app.route("/electives1", methods=['GET'])
 @jwt_required()
 def send_electives1():
-    parser = configparser.ConfigParser()
-    parser.read("config.txt")
-    courses = parser.get("config", "elective_1").split(",")
+    courses = db.get_elective_1().split(",")
     return {"courses": courses}
 
 @app.route("/electives2", methods=["GET"])
 @jwt_required()
 def send_electives2():
-    parser = configparser.ConfigParser()
-    parser.read("config.txt")
-    courses = parser.get("config", "elective_2").split(",")
+    courses = db.get_elective_2().split(",")
     return {"courses": courses}
 
 @app.route("/electives3", methods=["GET"])
 @jwt_required()
 def send_electives3():
-    parser = configparser.ConfigParser()
-    parser.read("config.txt")
-    courses = parser.get("config", "elective_3").split(",")
+    courses = db.get_elective_3().split(",")
     return {"courses": courses}
 
 @app.route("/electives_links", methods=["GET"])
 @jwt_required()
 def send_electives_links():
-    courses = Elective_Links.get()
+    courses = Elective_Links.get(db)
     return {"courses": courses}
 
 @app.route("/result/<username>", methods=["GET"])
@@ -85,7 +76,9 @@ def result(username):
     cbf_ranking = cbf_recommender.get_ranking(grades)
 
     generated_grades = db.get_generated_grades()
-    cf_recommender = CollaborativeFilteringRecommender(generated_grades)
+    noPackages = len(db.get_packages().split(","))
+    noCompulsory = len(db.get_compulsory_courses().split(","))
+    cf_recommender = CollaborativeFilteringRecommender(generated_grades, noPackages, noCompulsory)
     cf_ranking = cf_recommender.get_ranking(grades)
 
     merger = Merger(50, 20, 30)
