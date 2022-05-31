@@ -5,7 +5,6 @@ from courses_cleaner import CoursesCleaner
 from collaborative import CollaborativeFilteringRecommender
 from flask import Flask, request, session, jsonify
 import os
-from get_electives_links import Elective_Links
 from datetime import datetime, timedelta, timezone
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
 import json
@@ -60,7 +59,7 @@ def send_electives3():
 @app.route("/electives_links", methods=["GET"])
 @jwt_required()
 def send_electives_links():
-    courses = Elective_Links.get(db)
+    courses = db.get_elective_links()
     return {"courses": courses}
 
 @app.route("/result/<username>", methods=["GET"])
@@ -68,6 +67,8 @@ def send_electives_links():
 def result(username):
     grades = db.get_grades(username)
     preference = db.get_preference(username)
+    print(grades)
+    print(preference)
     preference.append(10)
     
     courses = CoursesCleaner(db).get_courses()

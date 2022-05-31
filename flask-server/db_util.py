@@ -3,7 +3,7 @@ import pandas as pd
 
 class DatabaseUtils:
     def __init__(self):
-        self.conn = mysql.connector.connect(host="localhost", user="root", password="", database="elective_recommender")
+        self.conn = mysql.connector.connect(host="localhost", user="root", password="root", database="elective_recommender")
     
     def get_connection(self):
         return self.conn
@@ -95,7 +95,7 @@ class DatabaseUtils:
             ''', (username,)
         )
         grades_string = cursor.fetchone()
-        grades = [int(x) for x in grades_string[0].decode().split(",")]
+        grades = [int(x) for x in grades_string[0].split(",")]
         cursor.close()
         return grades
 
@@ -108,7 +108,7 @@ class DatabaseUtils:
             ''', (username,)
         )
         preference_string = cursor.fetchone()
-        preference = preference_string[0].decode().split(",")
+        preference = preference_string[0].split(",")
         cursor.close()
         return preference
 
@@ -121,10 +121,10 @@ class DatabaseUtils:
             ''', (username,)
         )
         result_string = cursor.fetchone()
-        if cursor.rowcount == 0:
+        if result_string[0] == None or cursor.rowcount == 0:
             cursor.close()
             return result
-        result = result_string[0].decode().split(";")
+        result = result_string[0].split(";")
         cursor.close()
         return result
 
@@ -205,3 +205,8 @@ class DatabaseUtils:
         elective_3 = cursor.fetchone()[0]
         cursor.close()
         return elective_3
+
+    def get_elective_links(self):
+        df = self.get_courses()
+        df = df[df["Type"] == "Optional"]
+        return df[['Name', 'Link', 'Package']].values.tolist()

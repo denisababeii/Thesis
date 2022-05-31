@@ -119,7 +119,7 @@ function PreferencesForm(props) {
                 <div className="jumbotron my-auto jumbotron-custom">
                     <h1 className="display-3">Just one more step</h1>
                     <p className="lead">
-                        Your opinion matters!<br></br>Which of these courses sound interesting to you?
+                        Which of these courses sound interesting to you?<br></br> You don't have to know too much about them, just go with your gut!
                     </p>
                     <div className="one-col-box">
                         <div className="one-col-item">

@@ -2,18 +2,11 @@ import nltk
 import string
 import pandas as pd
 
-# nltk.download('stopwords')
-# nltk.download('words')
-# nltk.download('omw-1.4')
-# nltk.download('punkt')
-# nltk.download('wordnet')
-
 class CoursesCleaner:
     def __init__(self, database):
         self.courses = database.get_courses()
         self.ps = nltk.PorterStemmer()
         self.wn = nltk.WordNetLemmatizer()
-        self.words = set(nltk.corpus.words.words())
         self.stopwords = self.define_stopwords()
         self.courses["CleanDescription"] = self.courses['Description'].apply(lambda x: self.process_description(x))
 
@@ -29,19 +22,20 @@ class CoursesCleaner:
         return stopwords
 
     def process_description(self, description):
-        description = description.split()
-        clean_description = []
-        for desc in description:
-            d = "".join([char for char in desc if char not in string.punctuation])  # remove punctuations
-            d = d.lower()  # converting to lowercase letters
-            d = ' '.join([word for word in d.split() if word not in self.stopwords])  # remove stopwords
-            d = ' '.join([word for word in d.split() if len(word) >= 2])
-            clean_description.append(d)
-
-        clean_description = ' '.join(clean_description)
-
         # Tokenization
-        processed_description = nltk.word_tokenize(clean_description)
+        description = description.split()
+
+        processed_description = []
+        for element in description:
+            # Remove punctuation
+            word = "".join([char for char in element if char not in string.punctuation])
+
+            # Convert to lowercase letters
+            word = word.lower()
+
+            # Remove predefined stopwords and words with less than two characters
+            if word not in self.stopwords and len(word) >= 2:
+                processed_description.append(word)
 
         # Stemming
         processed_description = [self.ps.stem(word) for word in processed_description]
@@ -49,8 +43,7 @@ class CoursesCleaner:
         # Lemmatization
         processed_description = [self.wn.lemmatize(word) for word in processed_description]
 
-        processed_description = [word for word in processed_description if len(word) >= 2]
-
-        processed_description = ' '.join(w for w in processed_description if w in self.words)
+        # Create a string of the filtered words separated by space
+        processed_description = ' '.join(processed_description)
 
         return processed_description

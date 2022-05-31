@@ -6,7 +6,7 @@ data = pd.read_excel('grades.xlsx')
 df = pd.DataFrame(data)
 
 # Connect to SQL Server
-conn=mysql.connector.connect(host="localhost", user="root", password="", database="elective_recommender")
+conn=mysql.connector.connect(host="localhost", user="root", password="root", database="elective_recommender")
 cursor = conn.cursor()
 
 count=0
