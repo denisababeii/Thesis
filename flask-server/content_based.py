@@ -29,7 +29,7 @@ class ContentBasedFilteringRecommender:
         # An entry represents a pair of similarity and name
         recommendation = dict([(i + 1, [-1, ""]) for i in range(packages)])
         for i in range(len(electives)):
-            # Store in the dictionary the elective with the highest similarity for the current package
+            # Store in the dictionary the electives with the highest similarity for the current package
             if recommendation[electives[i][2]][0] < electives[i][0]:
                 recommendation[electives[i][2]] = [electives[i][0], electives[i][1]]
         return recommendation
@@ -45,6 +45,40 @@ class ContentBasedFilteringRecommender:
         # Return the highest similarities with elective courses
         return self.get_most_similar_electives_per_package(compulsory_course_similarities=similarities)
 
+    @staticmethod
+    def find(ranking, combination):
+        index = -1
+        for item in ranking:
+            index += 1
+            if item[0] == combination[0] and item[1] == combination[1] and item[2] == combination[2]:
+                return index
+        return -1
+
+    @staticmethod
+    def compute_weight(combination, ranking):
+        weight = 0
+        count = 0
+        # The weight is computed as the average of the weights of the duplicate combinations
+        for item in ranking:
+            if item[0] == combination[0] and item[1] == combination[1] and item[2] == combination[2]:
+                weight += item[3]
+                count += 1
+        weight /= count
+        return weight
+
+    def process_ranking(self, ranking):
+        # Values in cbf_ranking are not necessarily unique as compulsory courses can be similar to the same set of elective courses
+        # The ranking is processed so as to only contain unique values, with weights computed as the sum of the previous weights assigned to each combination 
+        processed_ranking = []
+        for combination in ranking:
+            # Use a helper function which returns the index of the combination in the ranking in case it is found, or -1 otherwise
+            index = self.find(processed_ranking, combination)
+            if index == -1:
+                # If the element has not been processed before, it is added to the new ranking with the newly computed weight
+                combination[3] = self.compute_weight(combination, ranking)
+                processed_ranking.append(combination)
+        return processed_ranking
+
     def get_ranking(self, user):
         compulsory_courses = self.courses[self.courses["Type"] != "Optional"]
         ranking = []
@@ -55,4 +89,5 @@ class ContentBasedFilteringRecommender:
             # Python list decomposition is used to provide the required output format
             # user[index] represents the grade of the user at the compulsory course from the position given by index
             ranking.append([*electives, user[index]])
+            ranking = self.process_ranking(ranking)
         return ranking

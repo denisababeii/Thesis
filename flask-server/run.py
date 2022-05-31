@@ -67,9 +67,6 @@ def send_electives_links():
 def result(username):
     grades = db.get_grades(username)
     preference = db.get_preference(username)
-    print(grades)
-    print(preference)
-    preference.append(10)
     
     courses = CoursesCleaner(db).get_courses()
 
@@ -82,7 +79,7 @@ def result(username):
     cf_recommender = CollaborativeFilteringRecommender(generated_grades, noPackages, noCompulsory)
     cf_ranking = cf_recommender.get_ranking(grades)
 
-    merger = Merger(50, 20, 30)
+    merger = Merger(50, 20, 30, 7)
     result = merger.merge(cbf_ranking, cf_ranking, preference)[0:3]
     print(result)
     db.save_result(username, result)

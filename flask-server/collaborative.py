@@ -44,8 +44,6 @@ class CollaborativeFilteringRecommender:
         # Compute the total average of the grades corresponding to each combination of electives
         # E.g.: elective X has an average grade of 5.25, elective Y - 6.5 and elective Z - 8. So the total average of the combination of electives X-Y-Z is (5.25+6.5+8)/3~= 6.58.
         data["Average"] = data[elective_mark_list].mean(axis=1)
-        # Sort descending by total average
-        data = data.sort_values(by=['Average'], ascending=False)
 
         # Drop the columns with the grades, in order to store only the names of the elective courses
         data.drop(labels=elective_mark_list, axis=1, inplace=True)
