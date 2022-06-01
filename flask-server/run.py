@@ -1,18 +1,17 @@
-from matplotlib.style import use
 from merger import Merger
 from content_based import ContentBasedFilteringRecommender
 from courses_cleaner import CoursesCleaner
 from collaborative import CollaborativeFilteringRecommender
 from flask import Flask, request, session, jsonify
 import os
-from datetime import datetime, timedelta, timezone
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
 import json
 from db_util import DatabaseUtils
 
+# Create Application object
 app = Flask(__name__)
+# Configure secret key
 app.config["JWT_SECRET_KEY"] = "long-and-secret-uncrackable-secret-key"
-app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=4)
 jwt = JWTManager(app)
 db = DatabaseUtils()
 
@@ -99,6 +98,7 @@ def login():
     if db.do_login(username, password) == "FAIL":
         response = {"access_token": None}, 401
     else:
+        # Generate access token if the credentials are valid
         access_token = create_access_token(identity=username)
         response = {"access_token":access_token}
     return response

@@ -2,7 +2,7 @@ import pandas as pd
 import mysql.connector
 
 # Import CSV
-data = pd.read_excel('test.xlsx') 
+data = pd.read_excel('courses.xlsx') 
 df = pd.DataFrame(data)
 
 # Connect to SQL Server
