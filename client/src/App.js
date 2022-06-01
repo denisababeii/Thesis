@@ -5,13 +5,13 @@ import GradesForm from './components/GradesForm';
 import PreferenceForm from './components/PreferenceForm'
 import Result from './components/Result'
 import Login from './components/Login'
-import CreateAccount from './components/CreateAccount'
 import UserProfile from './components/UserProfile'
 import CourseInfo from './components/CourseInfo'
 import './App.css'
 import { Navigation } from './components';
 import { useState } from 'react';
 import useUsername from './components/useUsername';
+import Signup from './components/Signup';
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -23,7 +23,7 @@ function App() {
         {!token && token!=="" &&token!== undefined?  
         <Routes>
           <Route path="/" element={<Login setToken={setToken} setUsername={setUsername}/>}></Route>
-          <Route path="/account" element={<CreateAccount setToken={setToken} setUsername={setUsername}/>} />
+          <Route path="/account" element={<Signup setToken={setToken} setUsername={setUsername}/>} />
         </Routes>
         :(<>
           <Navigation removeToken={removeToken}/>

@@ -2,9 +2,8 @@ from merger import Merger
 from content_based import ContentBasedFilteringRecommender
 from courses_cleaner import CoursesCleaner
 from collaborative import CollaborativeFilteringRecommender
-from flask import Flask, request, session, jsonify
-import os
-from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
+from flask import Flask, request, jsonify
+from flask_jwt_extended import create_access_token, unset_jwt_cookies, jwt_required, JWTManager
 import json
 from db_util import DatabaseUtils
 
@@ -122,5 +121,4 @@ def logout():
     return response
 
 if __name__ == "__main__":
-    app.secret_key = os.urandom(24)
     app.run(debug=True)

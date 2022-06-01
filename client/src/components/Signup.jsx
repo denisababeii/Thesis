@@ -7,7 +7,7 @@ import axios from "axios";
 import { useState } from 'react';
 import { Form, InputGroup, Col, Row } from "react-bootstrap";
 
-function CreateAccount(props) {
+function Signup(props) {
     let navigate = useNavigate(); 
     const [signupForm, setsignupForm] = useState({
         username: "",
@@ -119,4 +119,4 @@ function CreateAccount(props) {
     );
 }
 
-export default CreateAccount;
+export default Signup;
