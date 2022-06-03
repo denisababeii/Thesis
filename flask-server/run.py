@@ -107,7 +107,7 @@ def signup():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
 
-    if db.do_signup(username, password) == "FAIL":
+    if username=="" or password=="" or db.do_signup(username, password) == "FAIL":
         response = {"access_token": None}, 401
     else:
         access_token = create_access_token(identity=username)

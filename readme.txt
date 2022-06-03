@@ -1,6 +1,8 @@
 In order to activate the server, use the following commands:
-1. .\venv\Scripts\activate
-2. python run.py
+1. cd flask-server
+2. .\venv\Scripts\activate
+3. python run.py
 
 In order to activate the client, use the following commands:
-1. npm start
+1. cd client
+2. npm start
