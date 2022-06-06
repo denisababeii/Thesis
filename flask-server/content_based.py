@@ -89,5 +89,5 @@ class ContentBasedFilteringRecommender:
             # Python list decomposition is used to provide the required output format
             # user[index] represents the grade of the user at the compulsory course from the position given by index
             ranking.append([*electives, user[index]])
-            ranking = self.process_ranking(ranking)
+        ranking = self.process_ranking(ranking)
         return ranking
