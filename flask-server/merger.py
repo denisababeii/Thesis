@@ -10,7 +10,6 @@ class Merger:
         self.user_rank = user_rank
 
     def format(self, ranking):
-        ranking = ranking[0:3]
         result = []
         for rank in ranking:
             string_format=""
@@ -56,6 +55,6 @@ class Merger:
         # Add the Collaborative Filtering results
         final_ranking = self.merge_ranking(final_ranking, cf_ranking, self.cf_percentage)
         final_ranking.sort(key=lambda x: x[3], reverse=True)
-        return self.format(final_ranking)
+        return final_ranking
 
 

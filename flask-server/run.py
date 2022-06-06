@@ -14,6 +14,12 @@ app.config["JWT_SECRET_KEY"] = "long-and-secret-uncrackable-secret-key"
 jwt = JWTManager(app)
 db = DatabaseUtils()
 
+CBF_PERCENTAGE = 50
+CF_PERCENTAGE = 20
+USER_PERCENTAGE = 30
+USER_RANK = 7
+TOP_K = 3
+
 @app.route("/grades", methods=['POST'])
 @jwt_required()
 def get_grades():
@@ -77,9 +83,9 @@ def result(username):
     cf_recommender = CollaborativeFilteringRecommender(generated_grades, noPackages, noCompulsory)
     cf_ranking = cf_recommender.get_ranking(grades)
 
-    merger = Merger(50, 20, 30, 7)
-    result = merger.merge(cbf_ranking, cf_ranking, preference)[0:3]
-    print(result)
+    merger = Merger(CBF_PERCENTAGE, CF_PERCENTAGE, USER_PERCENTAGE, USER_RANK)
+    result = merger.merge(cbf_ranking, cf_ranking, preference)[0:TOP_K]
+    result = merger.format(result)
     db.save_result(username, result)
     return {"result": result}
 
