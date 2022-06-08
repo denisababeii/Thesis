@@ -5,4 +5,5 @@ In order to activate the server, use the following commands:
 
 In order to activate the client, use the following commands:
 1. cd client
-2. npm start
+2. npm install
+3. npm start
